@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="LudiKids — Jeu éducatif bilingue pour enfants de 3 ans. Apprenez les maths et le vocabulaire en français et en anglais avec Pandy le Panda !">
+    <title>LudiKids 🐼 — Apprendre en jouant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+
+        <header id="game-header">
+            <div class="star-counter">
+                <img src="assets/star.png" alt="Étoile" class="star-icon">
+                <span id="star-count">0</span>
+            </div>
+            <button id="sticker-book-btn" class="header-btn" title="Livre">📖</button>
+            <button id="playground-btn" class="header-btn" title="Terrain de jeu">🏞️</button>
+            <h1 id="game-title">Salut, je suis Pandy !</h1>
+            <button id="lang-toggle">🌐 EN</button>
+        </header>
+
+    <main id="game-viewport">
+        <!-- Intro Scene (static HTML, rest injected by JS) -->
+        <div id="intro-scene" class="scene active">
+            <img src="assets/mascot.png" alt="Pandy le Panda" id="mascot-img">
+            <p class="greeting">On va jouer ensemble ?</p>
+            <div class="menu-buttons">
+                <button id="math-btn" class="menu-btn">
+                    <span class="btn-icon">🔢</span>
+                    <span class="btn-text">Maths</span>
+                </button>
+                <button id="french-btn" class="menu-btn">
+                    <span class="btn-icon">🔤</span>
+                    <span class="btn-text">Mots</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer id="game-footer">
+        <button id="home-btn" class="footer-btn" title="Accueil">🏠</button>
+    </footer>
+
+    <!-- Reward Overlay -->
+    <div id="reward-overlay" class="hidden">
+        <div class="reward-content">
+            <img src="assets/star.png" alt="Étoile" class="big-star">
+            <h2>BRAVO !</h2>
+        </div>
+    </div>
+
+</div>
+<script type="module" src="/main.js"></script>
+</body>
+</html>

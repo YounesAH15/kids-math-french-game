@@ -1,0 +1,1420 @@
+{
+  "categories": [
+    {
+      "id": "animals",
+      "icon": "🦁",
+      "color": "#fde68a",
+      "name": { "fr": "Animaux", "en": "Animals" },
+      "items": [
+        { "id": "dog",      "name": { "fr": "Chien",    "en": "Dog"      }, "image": "assets/dog.png",      "emoji": "🐶" },
+        { "id": "cat",      "name": { "fr": "Chat",     "en": "Cat"      }, "image": "assets/cat.png",      "emoji": "🐱" },
+        { "id": "cow",      "name": { "fr": "Vache",    "en": "Cow"      }, "image": "assets/cow.png",      "emoji": "🐮" },
+        { "id": "lion",     "name": { "fr": "Lion",     "en": "Lion"     }, "image": "assets/lion.png",     "emoji": "🦁" },
+        { "id": "rabbit",   "name": { "fr": "Lapin",    "en": "Rabbit"   }, "image": "assets/rabbit.png",   "emoji": "🐰" },
+        { "id": "duck",     "name": { "fr": "Canard",   "en": "Duck"     }, "image": "assets/duck.png",     "emoji": "🐥" },
+        { "id": "elephant", "name": { "fr": "Éléphant", "en": "Elephant" }, "image": "assets/elephant.png", "emoji": "🐘" },
+        { "id": "fish",     "name": { "fr": "Poisson",  "en": "Fish"     }, "image": "assets/fish.png",     "emoji": "🐠" },
+        { "id": "horse",    "name": { "fr": "Cheval",   "en": "Horse"    }, "emoji": "🐴" },
+        { "id": "bird",     "name": { "fr": "Oiseau",   "en": "Bird"     }, "emoji": "🐦" },
+        { "id": "frog",     "name": { "fr": "Grenouille","en": "Frog"    }, "emoji": "🐸" },
+        { "id": "snake",    "name": { "fr": "Serpent",  "en": "Snake"    }, "emoji": "🐍" },
+        { "id": "monkey",   "name": { "fr": "Singe",    "en": "Monkey"   }, "emoji": "🐒" },
+        { "id": "turtle",   "name": { "fr": "Tortue",   "en": "Turtle"   }, "emoji": "🐢" }
+      ]
+    },
+    {
+      "id": "food",
+      "icon": "🍎",
+      "color": "#bbf7d0",
+      "name": { "fr": "Nourriture", "en": "Food" },
+      "items": [
+        { "id": "apple",      "name": { "fr": "Pomme",      "en": "Apple"      }, "image": "assets/apple.png",      "emoji": "🍎" },
+        { "id": "banana",     "name": { "fr": "Banane",     "en": "Banana"     }, "image": "assets/banana.png",     "emoji": "🍌" },
+        { "id": "carrot",     "name": { "fr": "Carotte",    "en": "Carrot"     }, "image": "assets/carrot.png",     "emoji": "🥕" },
+        { "id": "strawberry", "name": { "fr": "Fraise",     "en": "Strawberry" }, "image": "assets/strawberry.png", "emoji": "🍓" },
+        { "id": "orange",     "name": { "fr": "Orange",     "en": "Orange"     }, "image": "assets/orange.png",     "emoji": "🍊" },
+        { "id": "grape",      "name": { "fr": "Raisin",     "en": "Grape"      }, "emoji": "🍇" },
+        { "id": "watermelon", "name": { "fr": "Pastèque",   "en": "Watermelon" }, "emoji": "🍉" },
+        { "id": "bread",      "name": { "fr": "Pain",       "en": "Bread"      }, "emoji": "🍞" },
+        { "id": "milk",       "name": { "fr": "Lait",       "en": "Milk"       }, "emoji": "🥛" },
+        { "id": "egg",        "name": { "fr": "Oeuf",       "en": "Egg"        }, "emoji": "🥚" },
+        { "id": "cheese",     "name": { "fr": "Fromage",    "en": "Cheese"     }, "emoji": "🧀" },
+        { "id": "pizza",      "name": { "fr": "Pizza",      "en": "Pizza"      }, "emoji": "🍕" },
+        { "id": "cookie",     "name": { "fr": "Biscuit",    "en": "Cookie"     }, "emoji": "🍪" },
+        { "id": "ice_cream",  "name": { "fr": "Glace",      "en": "Ice Cream"  }, "emoji": "🍦" }
+      ]
+    },
+    {
+      "id": "vehicles",
+      "icon": "🚗",
+      "color": "#bfdbfe",
+      "name": { "fr": "Véhicules", "en": "Vehicles" },
+      "items": [
+        { "id": "car",        "name": { "fr": "Voiture",    "en": "Car"        }, "image": "assets/car.png",   "emoji": "🚗" },
+        { "id": "plane",      "name": { "fr": "Avion",      "en": "Plane"      }, "image": "assets/plane.png", "emoji": "✈️" },
+        { "id": "bus",        "name": { "fr": "Bus",        "en": "Bus"        }, "emoji": "🚌" },
+        { "id": "train",      "name": { "fr": "Train",      "en": "Train"      }, "emoji": "🚂" },
+        { "id": "boat",       "name": { "fr": "Bateau",     "en": "Boat"       }, "emoji": "⛵" },
+        { "id": "bicycle",    "name": { "fr": "Vélo",       "en": "Bicycle"    }, "emoji": "🚲" },
+        { "id": "truck",      "name": { "fr": "Camion",     "en": "Truck"      }, "emoji": "🚚" },
+        { "id": "helicopter", "name": { "fr": "Hélicoptère","en": "Helicopter" }, "emoji": "🚁" },
+        { "id": "rocket",     "name": { "fr": "Fusée",      "en": "Rocket"     }, "emoji": "🚀" },
+        { "id": "tractor",    "name": { "fr": "Tracteur",   "en": "Tractor"    }, "emoji": "🚜" }
+      ]
+    },
+    {
+      "id": "colors",
+      "icon": "🎨",
+      "color": "#f5d0fe",
+      "name": { "fr": "Couleurs", "en": "Colors" },
+      "items": [
+        { "id": "red",    "name": { "fr": "Rouge",  "en": "Red"    }, "emoji": "🔴", "color": "#ef4444" },
+        { "id": "blue",   "name": { "fr": "Bleu",   "en": "Blue"   }, "emoji": "🔵", "color": "#3b82f6" },
+        { "id": "yellow", "name": { "fr": "Jaune",  "en": "Yellow" }, "emoji": "🟡", "color": "#eab308" },
+        { "id": "green",  "name": { "fr": "Vert",   "en": "Green"  }, "emoji": "🟢", "color": "#22c55e" },
+        { "id": "orange", "name": { "fr": "Orange", "en": "Orange" }, "emoji": "🟠", "color": "#f97316" },
+        { "id": "purple", "name": { "fr": "Violet", "en": "Purple" }, "emoji": "🟣", "color": "#a855f7" },
+        { "id": "pink",   "name": { "fr": "Rose",   "en": "Pink"   }, "emoji": "🩷", "color": "#ec4899" },
+        { "id": "white",  "name": { "fr": "Blanc",  "en": "White"  }, "emoji": "⬜", "color": "#e5e7eb" },
+        { "id": "black",  "name": { "fr": "Noir",   "en": "Black"  }, "emoji": "⬛", "color": "#1f2937" },
+        { "id": "brown",  "name": { "fr": "Marron", "en": "Brown"  }, "emoji": "🟤", "color": "#78350f" }
+      ]
+    },
+    {
+      "id": "body",
+      "icon": "👤",
+      "color": "#fed7aa",
+      "name": { "fr": "Corps", "en": "Body" },
+      "items": [
+        { "id": "head",   "name": { "fr": "Tête",    "en": "Head"   }, "emoji": "🗣️" },
+        { "id": "eye",    "name": { "fr": "Oeil",    "en": "Eye"    }, "emoji": "👁️" },
+        { "id": "ear",    "name": { "fr": "Oreille", "en": "Ear"    }, "emoji": "👂" },
+        { "id": "nose",   "name": { "fr": "Nez",     "en": "Nose"   }, "emoji": "👃" },
+        { "id": "mouth",  "name": { "fr": "Bouche",  "en": "Mouth"  }, "emoji": "👄" },
+        { "id": "hand",   "name": { "fr": "Main",    "en": "Hand"   }, "emoji": "✋" },
+        { "id": "foot",   "name": { "fr": "Pied",    "en": "Foot"   }, "emoji": "🦶" },
+        { "id": "heart",  "name": { "fr": "Coeur",   "en": "Heart"  }, "emoji": "❤️" },
+        { "id": "arm",    "name": { "fr": "Bras",    "en": "Arm"    }, "emoji": "💪" },
+        { "id": "leg",    "name": { "fr": "Jambe",   "en": "Leg"    }, "emoji": "🦵" }
+      ]
+    },
+    {
+      "id": "nature",
+      "icon": "🌿",
+      "color": "#d1fae5",
+      "name": { "fr": "Nature", "en": "Nature" },
+      "items": [
+        { "id": "sun",     "name": { "fr": "Soleil",  "en": "Sun"    }, "emoji": "☀️" },
+        { "id": "moon",    "name": { "fr": "Lune",    "en": "Moon"   }, "emoji": "🌙" },
+        { "id": "star",    "name": { "fr": "Étoile",  "en": "Star"   }, "emoji": "⭐" },
+        { "id": "cloud",   "name": { "fr": "Nuage",   "en": "Cloud"  }, "emoji": "☁️" },
+        { "id": "rain",    "name": { "fr": "Pluie",   "en": "Rain"   }, "emoji": "🌧️" },
+        { "id": "flower",  "name": { "fr": "Fleur",   "en": "Flower" }, "emoji": "🌸" },
+        { "id": "tree",    "name": { "fr": "Arbre",   "en": "Tree"   }, "emoji": "🌳" },
+        { "id": "mountain","name": { "fr": "Montagne","en": "Mountain"}, "emoji": "⛰️" },
+        { "id": "snow",    "name": { "fr": "Neige",   "en": "Snow"   }, "emoji": "❄️" },
+        { "id": "leaf",    "name": { "fr": "Feuille", "en": "Leaf"   }, "emoji": "🍃" }
+      ]
+    },
+    {
+      "id": "house",
+      "icon": "🏠",
+      "color": "#e0e7ff",
+      "name": { "fr": "Maison", "en": "Home" },
+      "items": [
+        { "id": "door",    "name": { "fr": "Porte",   "en": "Door"   }, "emoji": "🚪" },
+        { "id": "chair",   "name": { "fr": "Chaise",  "en": "Chair"  }, "emoji": "🪑" },
+        { "id": "table",   "name": { "fr": "Table",   "en": "Table"  }, "emoji": "🪞" },
+        { "id": "bed",     "name": { "fr": "Lit",     "en": "Bed"    }, "emoji": "🛏️" },
+        { "id": "bath",    "name": { "fr": "Bain",    "en": "Bath"   }, "emoji": "🛁" },
+        { "id": "lamp",    "name": { "fr": "Lampe",   "en": "Lamp"   }, "emoji": "💡" },
+        { "id": "book",    "name": { "fr": "Livre",   "en": "Book"   }, "emoji": "📚" },
+        { "id": "ball",    "name": { "fr": "Balle",   "en": "Ball"   }, "emoji": "⚽" },
+        { "id": "key",     "name": { "fr": "Clé",     "en": "Key"    }, "emoji": "🔑" },
+        { "id": "window",  "name": { "fr": "Fenêtre", "en": "Window" }, "emoji": "🪟" }
+      ]
+    },
+    {
+      "id": "family",
+      "icon": "👨‍👩‍👧",
+      "color": "#fef3c7",
+      "name": { "fr": "Famille", "en": "Family" },
+      "items": [
+        { "id": "mama",    "name": { "fr": "Maman",   "en": "Mama"   }, "emoji": "👩" },
+        { "id": "papa",    "name": { "fr": "Papa",    "en": "Papa"   }, "emoji": "👨" },
+        { "id": "baby",    "name": { "fr": "Bébé",    "en": "Baby"   }, "emoji": "👶" },
+        { "id": "sister",  "name": { "fr": "Soeur",   "en": "Sister" }, "emoji": "👧" },
+        { "id": "brother", "name": { "fr": "Frère",   "en": "Brother"}, "emoji": "👦" },
+        { "id": "grandma", "name": { "fr": "Mamie",   "en": "Grandma"}, "emoji": "👵" },
+        { "id": "grandpa", "name": { "fr": "Papy",    "en": "Grandpa"}, "emoji": "👴" }
+      ]
+    },
+    {
+      "id": "clothing",
+      "icon": "👕",
+      "color": "#fae8ff",
+      "name": { "fr": "Habits", "en": "Clothing" },
+      "items": [
+        { "id": "hat",     "name": { "fr": "Chapeau", "en": "Hat"    }, "emoji": "👒" },
+        { "id": "shirt",   "name": { "fr": "Chemise", "en": "Shirt"  }, "emoji": "👕" },
+        { "id": "pants",   "name": { "fr": "Pantalon", "en": "Pants" }, "emoji": "👖" },
+        { "id": "shoes",   "name": { "fr": "Chaussures","en": "Shoes"}, "emoji": "👟" },
+        { "id": "socks",   "name": { "fr": "Chaussettes","en": "Socks"}, "emoji": "🧦" },
+        { "id": "coat",    "name": { "fr": "Manteau",  "en": "Coat"  }, "emoji": "🧥" },
+        { "id": "dress",   "name": { "fr": "Robe",     "en": "Dress" }, "emoji": "👗" }
+      ]
+    },
+    {
+      "id": "actions",
+      "icon": "🏃",
+      "color": "#ecfdf5",
+      "name": { "fr": "Actions", "en": "Actions" },
+      "items": [
+        { "id": "run",     "name": { "fr": "Courir",  "en": "Run"    }, "emoji": "🏃" },
+        { "id": "jump",    "name": { "fr": "Sauter",  "en": "Jump"   }, "emoji": "🦘" },
+        { "id": "eat",     "name": { "fr": "Manger",  "en": "Eat"    }, "emoji": "😋" },
+        { "id": "drink",   "name": { "fr": "Boire",   "en": "Drink"  }, "emoji": "🥤" },
+        { "id": "sleep",   "name": { "fr": "Dormir",  "en": "Sleep"  }, "emoji": "😴" },
+        { "id": "dance",   "name": { "fr": "Danser",  "en": "Dance"  }, "emoji": "💃" },
+        { "id": "sing",    "name": { "fr": "Chanter", "en": "Sing"   }, "emoji": "🎤" }
+      ]
+    },
+    {
+      "id": "emotions",
+      "icon": "😊",
+      "color": "#fff1f2",
+      "name": { "fr": "Émotions", "en": "Emotions" },
+      "items": [
+        { "id": "happy",   "name": { "fr": "Content", "en": "Happy"  }, "emoji": "😊" },
+        { "id": "sad",     "name": { "fr": "Triste",  "en": "Sad"    }, "emoji": "😢" },
+        { "id": "angry",   "name": { "fr": "Colère",  "en": "Angry"  }, "emoji": "😠" },
+        { "id": "scared",  "name": { "fr": "Peur",    "en": "Scared" }, "emoji": "😨" },
+        { "id": "funny",   "name": { "fr": "Rigolo",  "en": "Funny"  }, "emoji": "🤪" },
+        { "id": "love",    "name": { "fr": "Amour",   "en": "Love"   }, "emoji": "😍" }
+      ]
+    },
+    {
+      "id": "school",
+      "icon": "✏️",
+      "color": "#f0f9ff",
+      "name": { "fr": "École", "en": "School" },
+      "items": [
+        { "id": "pencil",  "name": { "fr": "Crayon",  "en": "Pencil" }, "emoji": "✏️" },
+        { "id": "paper",   "name": { "fr": "Papier",  "en": "Paper"  }, "emoji": "📄" },
+        { "id": "bag",     "name": { "fr": "Sac",     "en": "Bag"    }, "emoji": "🎒" },
+        { "id": "ruler",   "name": { "fr": "Règle",   "en": "Ruler"  }, "emoji": "📏" },
+        { "id": "teacher", "name": { "fr": "Maître",  "en": "Teacher"}, "emoji": "👩‍🏫" }
+      ]
+    },
+    {
+      "id": "shapes",
+      "icon": "📐",
+      "color": "#e0f2fe",
+      "name": { "fr": "Formes", "en": "Shapes" },
+      "items": [
+        { "id": "circle",   "name": { "fr": "Cercle",   "en": "Circle" }, "emoji": "⭕" },
+        { "id": "square",   "name": { "fr": "Carré",    "en": "Square" }, "emoji": "⬛" },
+        { "id": "triangle", "name": { "fr": "Triangle", "en": "Triangle" }, "emoji": "🔺" },
+        { "id": "star",     "name": { "fr": "Étoile",   "en": "Star" },   "emoji": "⭐" },
+        { "id": "heart",    "name": { "fr": "Coeur",    "en": "Heart" },  "emoji": "❤️" },
+        { "id": "diamond",  "name": { "fr": "Losange",  "en": "Diamond" }, "emoji": "💠" },
+        { "id": "oval",     "name": { "fr": "Ovale",    "en": "Oval" },    "emoji": "🥚" },
+        { "id": "hexagon",  "name": { "fr": "Hexagone", "en": "Hexagon" }, "emoji": "⬢" }
+      ]
+    },
+    {
+      "id": "holidays",
+      "icon": "🎉",
+      "color": "#fef3c7",
+      "name": { "fr": "Fêtes", "en": "Holidays" },
+      "items": [
+        { "id": "christmas", "name": { "fr": "Noël",     "en": "Christmas" }, "emoji": "🎄" },
+        { "id": "pumpkin",   "name": { "fr": "Citrouille","en": "Pumpkin" },   "emoji": "🎃" },
+        { "id": "birthday",  "name": { "fr": "Anniversaire","en": "Birthday" }, "emoji": "🎂" },
+        { "id": "gift",      "name": { "fr": "Cadeau",   "en": "Gift" },      "emoji": "🎁" },
+        { "id": "ghost",     "name": { "fr": "Fantôme",  "en": "Ghost" },     "emoji": "👻" },
+        { "id": "santa",     "name": { "fr": "Père Noël","en": "Santa" },     "emoji": "🎅" }
+      ]
+    },
+    {
+      "id": "weather",
+      "icon": "☁️",
+      "color": "#cbd5e1",
+      "name": { "fr": "Météo", "en": "Weather" },
+      "items": [
+        { "id": "sun",      "name": { "fr": "Soleil",    "en": "Sun" },      "emoji": "☀️" },
+        { "id": "rain",     "name": { "fr": "Pluie",     "en": "Rain" },     "emoji": "🌧️" },
+        { "id": "snow",     "name": { "fr": "Neige",     "en": "Snow" },     "emoji": "❄️" },
+        { "id": "rainbow",  "name": { "fr": "Arc-en-ciel", "en": "Rainbow" }, "emoji": "🌈" },
+        { "id": "flash",    "name": { "fr": "Éclair",    "en": "Lightning" },"emoji": "⚡" },
+        { "id": "cloud",    "name": { "fr": "Nuage",     "en": "Cloud" },    "emoji": "☁️" }
+      ]
+    },
+    {
+      "id": "musique",
+      "icon": "🎸",
+      "color": "#fef08a",
+      "name": { "fr": "Musique", "en": "Music" },
+      "items": [
+        { "id": "piano",    "name": { "fr": "Piano",     "en": "Piano" },    "emoji": "🎹" },
+        { "id": "guitar",   "name": { "fr": "Guitare",   "en": "Guitar" },   "emoji": "🎸" },
+        { "id": "drums",    "name": { "fr": "Tambour",   "en": "Drums" },    "emoji": "🥁" },
+        { "id": "violin",   "name": { "fr": "Violon",    "en": "Violin" },   "emoji": "🎻" },
+        { "id": "trumpet",  "name": { "fr": "Trompette", "en": "Trumpet" },  "emoji": "🎺" },
+        { "id": "harp",     "name": { "fr": "Harpe",     "en": "Harp" },     "emoji": "🪕" }
+      ]
+    },
+    {
+      "id": "space",
+      "icon": "🚀",
+      "color": "#e0e7ff",
+      "name": { "fr": "Espace", "en": "Space" },
+      "items": [
+        { "id": "rocket",   "name": { "fr": "Fusée",     "en": "Rocket" },   "emoji": "🚀" },
+        { "id": "moon",     "name": { "fr": "Lune",      "en": "Moon" },     "emoji": "🌙" },
+        { "id": "earth",    "name": { "fr": "Terre",     "en": "Earth" },    "emoji": "🌍" },
+        { "id": "star",     "name": { "fr": "Étoile",    "en": "Star" },     "emoji": "⭐" },
+        { "id": "alien",    "name": { "fr": "Extraterrestre", "en": "Alien" },"emoji": "👽" },
+        { "id": "saturn",   "name": { "fr": "Saturne",    "en": "Saturn" },  "emoji": "🪐" }
+      ]
+    },
+    {
+      "id": "oceans",
+      "icon": "🌊",
+      "color": "#e0f2fe",
+      "name": { "fr": "Océans", "en": "Oceans" },
+      "items": [
+        { "id": "whale",    "name": { "fr": "Baleine",   "en": "Whale" },    "emoji": "🐋" },
+        { "id": "shark",    "name": { "fr": "Requin",    "en": "Shark" },    "emoji": "🦈" },
+        { "id": "dolphin",  "name": { "fr": "Dauphin",   "en": "Dolphin" },  "emoji": "🐬" },
+        { "id": "octopus",  "name": { "fr": "Poulpe",    "en": "Octopus" },  "emoji": "🐙" },
+        { "id": "crab",     "name": { "fr": "Crabe",     "en": "Crab" },     "emoji": "🦀" },
+        { "id": "shell",    "name": { "fr": "Coquillage","en": "Shell" },    "emoji": "🐚" }
+      ]
+    },
+    {
+      "id": "numbers",
+      "icon": "🔟",
+      "color": "#fef3c7",
+      "name": { "fr": "Nombres", "en": "Numbers" },
+      "items": [
+        { "id": "n1",       "name": { "fr": "Un",       "en": "One" },      "emoji": "1️⃣" },
+        { "id": "n2",       "name": { "fr": "Deux",     "en": "Two" },      "emoji": "2️⃣" },
+        { "id": "n3",       "name": { "fr": "Trois",    "en": "Three" },    "emoji": "3️⃣" },
+        { "id": "n4",       "name": { "fr": "Quatre",   "en": "Four" },     "emoji": "4️⃣" },
+        { "id": "n5",       "name": { "fr": "Cinq",     "en": "Five" },     "emoji": "5️⃣" },
+        { "id": "n10",      "name": { "fr": "Dix",      "en": "Ten" },      "emoji": "🔟" }
+      ]
+    },
+    {
+      "id": "sports",
+      "icon": "🏀",
+      "color": "#fef9c3",
+      "name": { "fr": "Sports", "en": "Sports" },
+      "items": [
+        { "id": "ball",     "name": { "fr": "Ballon",    "en": "Ball" },     "emoji": "⚽" },
+        { "id": "tennis",   "name": { "fr": "Tennis",    "en": "Tennis" },   "emoji": "🎾" },
+        { "id": "swim",     "name": { "fr": "Nager",     "en": "Swimming" }, "emoji": "🏊" },
+        { "id": "bike",     "name": { "fr": "Vélo",      "en": "Cycling" },  "emoji": "🚴" },
+        { "id": "basket",   "name": { "fr": "Panier",    "en": "Basketball"},"emoji": "🏀" },
+        { "id": "skate",    "name": { "fr": "Skate",     "en": "Skating" },  "emoji": "🛹" }
+      ]
+    },
+    {
+      "id": "jobs",
+      "icon": "👨‍⚕️",
+      "color": "#f0fdf4",
+      "name": { "fr": "Métiers", "en": "Jobs" },
+      "items": [
+        { "id": "doc",      "name": { "fr": "Docteur",   "en": "Doctor" },   "emoji": "👨‍⚕️" },
+        { "id": "fire",     "name": { "fr": "Pompier",   "en": "Fireman" },  "emoji": "👨‍🚒" },
+        { "id": "pilot",    "name": { "fr": "Pilote",    "en": "Pilot" },    "emoji": "👩‍✈️" },
+        { "id": "police",   "name": { "fr": "Police",    "en": "Police" },   "emoji": "👮" },
+        { "id": "cook",     "name": { "fr": "Cuisinier", "en": "Cook" },     "emoji": "👨‍🍳" },
+        { "id": "artist",   "name": { "fr": "Artiste",   "en": "Artist" },   "emoji": "👩‍🎨" }
+      ]
+    },
+    {
+      "id": "garden",
+      "icon": "🌻",
+      "color": "#fefce8",
+      "name": { "fr": "Jardin",  "en": "Garden" },
+      "items": [
+        { "id": "flower",   "name": { "fr": "Fleur",     "en": "Flower" },   "emoji": "🌻" },
+        { "id": "bee",      "name": { "fr": "Abeille",   "en": "Bee" },      "emoji": "🐝" },
+        { "id": "butterfly","name": { "fr": "Papillon",  "en": "Butterfly" },"emoji": "🦋" },
+        { "id": "snail",    "name": { "fr": "Escargot",  "en": "Snail" },    "emoji": "🐌" },
+        { "id": "ladybug",  "name": { "fr": "Coccinelle","en": "Ladybug" },  "emoji": "🐞" },
+        { "id": "sprout",   "name": { "fr": "Pousse",    "en": "Sprout" },   "emoji": "🌱" }
+      ]
+    },
+    {
+      "id": "fantasy",
+      "icon": "🦄",
+      "color": "#fefceb",
+      "name": { "fr": "Fantaisie", "en": "Fantasy" },
+      "items": [
+        { "id": "dragon",   "name": { "fr": "Dragon",    "en": "Dragon" },   "emoji": "🐉" },
+        { "id": "wizard",   "name": { "fr": "Magicien",  "en": "Wizard" },   "emoji": "🧙" },
+        { "id": "castle",   "name": { "fr": "Château",   "en": "Castle" },   "emoji": "🏰" },
+        { "id": "unicorn",  "name": { "fr": "Licorne",   "en": "Unicorn" },  "emoji": "🦄" },
+        { "id": "wand",     "name": { "fr": "Baguette",  "en": "Wand" },      "emoji": "🪄" },
+        { "id": "fairy",    "name": { "fr": "Fée",       "en": "Fairy" },     "emoji": "🧚" }
+      ]
+    },
+    {
+      "id": "routine",
+      "icon": "🛁",
+      "color": "#f0fdf4",
+      "name": { "fr": "Routine", "en": "Daily Routine" },
+      "items": [
+        { "id": "brush",    "name": { "fr": "Dentifrice","en": "Brush Teeth"},"emoji": "🪥" },
+        { "id": "wash",     "name": { "fr": "Laver",     "en": "Wash Hands"}, "emoji": "🧼" },
+        { "id": "sleep",    "name": { "fr": "Dormir",    "en": "Sleep" },     "emoji": "😴" },
+        { "id": "eat",      "name": { "fr": "Manger",    "en": "Eat" },       "emoji": "😋" },
+        { "id": "dress",    "name": { "fr": "Habiller",  "en": "Dress" },     "emoji": "👗" }
+      ]
+    },
+    {
+      "id": "wildlife",
+      "icon": "🦒",
+      "color": "#fefce8",
+      "name": { "fr": "Vie Sauvage", "en": "Wild Life" },
+      "items": [
+        { "id": "zebra",    "name": { "fr": "Zèbre",     "en": "Zebra" },    "emoji": "🦓" },
+        { "id": "giraffe",  "name": { "fr": "Girafe",    "en": "Giraffe" },  "emoji": "🦒" },
+        { "id": "croc",     "name": { "fr": "Crocodile", "en": "Crocodile" },"emoji": "🐊" },
+        { "id": "bat",      "name": { "fr": "Chauve-souris", "en": "Bat" },  "emoji": "🦇" },
+        { "id": "owl",      "name": { "fr": "Hibou",     "en": "Owl" },      "emoji": "🦉" },
+        { "id": "kangaroo", "name": { "fr": "Kangourou", "en": "Kangaroo" }, "emoji": "🦘" }
+      ]
+    },
+    {
+      "id": "science",
+      "icon": "🧪",
+      "color": "#f0f9ff",
+      "name": { "fr": "Science", "en": "Science" },
+      "items": [
+        { "id": "magnet",   "name": { "fr": "Aimant",    "en": "Magnet" },   "emoji": "🧲" },
+        { "id": "lens",     "name": { "fr": "Loupe",     "en": "Magnifying glass"}, "emoji": "🔍" },
+        { "id": "telescope","name": { "fr": "Télescope", "en": "Telescope" },"emoji": "🔭" },
+        { "id": "testtube", "name": { "fr": "Éprouvette","en": "Test tube" }, "emoji": "🧪" },
+        { "id": "micro",    "name": { "fr": "Microscope","en": "Microscope" },"emoji": "🔬" }
+      ]
+    },
+    {
+      "id": "baking",
+      "icon": "🧁",
+      "color": "#fff1f2",
+      "name": { "fr": "Pâtisserie", "en": "Baking" },
+      "items": [
+        { "id": "cake",     "name": { "fr": "Gâteau",    "en": "Cake" },     "emoji": "🎂" },
+        { "id": "cupcake",  "name": { "fr": "Cupcake",   "en": "Cupcake" },  "emoji": "🧁" },
+        { "id": "mixer",    "name": { "fr": "Mixeur",    "en": "Mixer" },    "emoji": "🥣" },
+        { "id": "pin",      "name": { "fr": "Rouleau",   "en": "Rolling pin"},"emoji": "🥖" },
+        { "id": "egg",      "name": { "fr": "Oeuf",      "en": "Egg" },      "emoji": "🥚" },
+        { "id": "flour",    "name": { "fr": "Farine",    "en": "Flour" },    "emoji": "🥡" }
+      ]
+    },
+    {
+      "id": "toys",
+      "icon": "🧸",
+      "color": "#fdf4ff",
+      "name": { "fr": "Jouets", "en": "Toys" },
+      "items": [
+        { "id": "teddy",    "name": { "fr": "Nounours",  "en": "Teddy bear"},"emoji": "🧸" },
+        { "id": "doll",     "name": { "fr": "Poupée",    "en": "Doll" },     "emoji": "🪆" },
+        { "id": "puzzle",   "name": { "fr": "Puzzle",    "en": "Puzzle" },   "emoji": "🧩" },
+        { "id": "blocks",   "name": { "fr": "Blocs",     "en": "Blocks" },   "emoji": "🧱" },
+        { "id": "kite",     "name": { "fr": "Cerf-volant","en": "Kite" },    "emoji": "🪁" },
+        { "id": "yo-yo",    "name": { "fr": "Yoyo",      "en": "Yo-yo" },    "emoji": "🪀" }
+      ]
+    },
+    {
+      "id": "art",
+      "icon": "🎨",
+      "color": "#fff7ed",
+      "name": { "fr": "Art", "en": "Art" },
+      "items": [
+        { "id": "brush",    "name": { "fr": "Pinceau",   "en": "Paintbrush"},"emoji": "🖌️" },
+        { "id": "crayon",   "name": { "fr": "Crayon",    "en": "Crayon" },   "emoji": "🖍️" },
+        { "id": "palette",  "name": { "fr": "Palette",   "en": "Palette" },  "emoji": "🎨" },
+        { "id": "canvas",   "name": { "fr": "Toile",     "en": "Canvas" },   "emoji": "🖼️" },
+        { "id": "scissors", "name": { "fr": "Ciseaux",   "en": "Scissors" }, "emoji": "✂️" }
+      ]
+    },
+    {
+      "id": "insects",
+      "icon": "🦗",
+      "color": "#fefce8",
+      "name": { "fr": "Insectes", "en": "Insects" },
+      "items": [
+        { "id": "ant",      "name": { "fr": "Fourmi",    "en": "Ant" },      "emoji": "🐜" },
+        { "id": "spider",   "name": { "fr": "Araignée",  "en": "Spider" },   "emoji": "🕷️" },
+        { "id": "bug",      "name": { "fr": "Chenille",  "en": "Caterpillar"},"emoji": "🐛" },
+        { "id": "fly",      "name": { "fr": "Mouche",    "en": "Fly" },      "emoji": "🪰" },
+        { "id": "grass",    "name": { "fr": "Sauterelle","en": "Grasshopper"},"emoji": "🦗" },
+        { "id": "mosquito", "name": { "fr": "Moustique", "en": "Mosquito" }, "emoji": "🦟" }
+      ]
+    },
+    {
+      "id": "objects",
+      "icon": "🕶️",
+      "color": "#f8fafc",
+      "name": { "fr": "Objets", "en": "Objects" },
+      "items": [
+        { "id": "watch",    "name": { "fr": "Montre",    "en": "Watch" },    "emoji": "⌚" },
+        { "id": "glasses",  "name": { "fr": "Lunettes",  "en": "Glasses" },  "emoji": "👓" },
+        { "id": "phone",    "name": { "fr": "Téléphone", "en": "Phone" },    "emoji": "📱" },
+        { "id": "umbrella", "name": { "fr": "Parapluie", "en": "Umbrella" }, "emoji": "☂️" },
+        { "id": "wallet",   "name": { "fr": "Portefeuille","en": "Wallet" },  "emoji": "👛" },
+        { "id": "key",      "name": { "fr": "Clé",       "en": "Key" },       "emoji": "🔑" }
+      ]
+    },
+    {
+      "id": "tools",
+      "icon": "🛠️",
+      "color": "#f1f5f9",
+      "name": { "fr": "Outils", "en": "Tools" },
+      "items": [
+        { "id": "hammer",   "name": { "fr": "Marteau",   "en": "Hammer" },   "emoji": "🔨" },
+        { "id": "saw",      "name": { "fr": "Scie",      "en": "Saw" },      "emoji": "🪚" },
+        { "id": "wrench",   "name": { "fr": "Clé",       "en": "Wrench" },   "emoji": "🔧" },
+        { "id": "drill",    "name": { "fr": "Perceuse",  "en": "Drill" },    "emoji": "🔩" },
+        { "id": "ruler",    "name": { "fr": "Règle",     "en": "Ruler" },    "emoji": "📏" },
+        { "id": "tape",     "name": { "fr": "Mètre",     "en": "Tape measure"},"emoji": "📏" }
+      ]
+    },
+    {
+      "id": "vegetables",
+      "icon": "🥦",
+      "color": "#f0fdf4",
+      "name": { "fr": "Légumes", "en": "Vegetables" },
+      "items": [
+        { "id": "broccoli", "name": { "fr": "Brocoli",   "en": "Broccoli" }, "emoji": "🥦" },
+        { "id": "tomato",   "name": { "fr": "Tomate",    "en": "Tomato" },   "emoji": "🍅" },
+        { "id": "potato",   "name": { "fr": "Patate",    "en": "Potato" },   "emoji": "🥔" },
+        { "id": "corn",     "name": { "fr": "Maïs",      "en": "Corn" },     "emoji": "🌽" },
+        { "id": "peas",     "name": { "fr": "Petits pois","en": "Peas" },    "emoji": "🫛" },
+        { "id": "cucumber", "name": { "fr": "Concombre", "en": "Cucumber" }, "emoji": "🥒" }
+      ]
+    },
+    {
+      "id": "buildings",
+      "icon": "🏦",
+      "color": "#f1f5f9",
+      "name": { "fr": "Bâtiments", "en": "Buildings" },
+      "items": [
+        { "id": "hospital", "name": { "fr": "Hôpital",   "en": "Hospital" }, "emoji": "🏥" },
+        { "id": "bank",     "name": { "fr": "Banque",    "en": "Bank" },     "emoji": "🏦" },
+        { "id": "store",    "name": { "fr": "Magasin",   "en": "Store" },    "emoji": "🛒" },
+        { "id": "library",  "name": { "fr": "Bibliothèque","en": "Library" }, "emoji": "🏛️" },
+        { "id": "station",  "name": { "fr": "Pompier",   "en": "Fire Station"},"emoji": "👨‍🚒" }
+      ]
+    },
+    {
+      "id": "seasons",
+      "icon": "🍂",
+      "color": "#fefceb",
+      "name": { "fr": "Saisons", "en": "Seasons" },
+      "items": [
+        { "id": "spring",   "name": { "fr": "Printemps", "en": "Spring" },   "emoji": "🌱" },
+        { "id": "summer",   "name": { "fr": "Été",       "en": "Summer" },   "emoji": "☀️" },
+        { "id": "autumn",   "name": { "fr": "Automne",   "en": "Autumn" },   "emoji": "🍂" },
+        { "id": "winter",   "name": { "fr": "Hiver",     "en": "Winter" },   "emoji": "❄️" }
+      ]
+    },
+    {
+      "id": "farm",
+      "icon": "🐷",
+      "color": "#fef2f2",
+      "name": { "fr": "La Ferme", "en": "The Farm" },
+      "items": [
+        { "id": "pig",      "name": { "fr": "Cochon",    "en": "Pig" },      "emoji": "🐷" },
+        { "id": "cow_f",    "name": { "fr": "Vache",     "en": "Cow" },      "emoji": "🐮" },
+        { "id": "sheep",    "name": { "fr": "Mouton",    "en": "Sheep" },    "emoji": "🐑" },
+        { "id": "chicken",  "name": { "fr": "Poule",     "en": "Chicken" },  "emoji": "🐔" },
+        { "id": "donkey",   "name": { "fr": "Âne",       "en": "Donkey" },   "emoji": "🫏" },
+        { "id": "barn",     "name": { "fr": "Grange",    "en": "Barn" },     "emoji": "🛖" }
+      ]
+    },
+    {
+      "id": "opposites",
+      "icon": "↔️",
+      "color": "#f8fafc",
+      "name": { "fr": "Contraires", "en": "Opposites" },
+      "items": [
+        { "id": "hot",      "name": { "fr": "Chaud",     "en": "Hot" },      "emoji": "🔥" },
+        { "id": "cold",     "name": { "fr": "Froid",     "en": "Cold" },     "emoji": "❄️" },
+        { "id": "big",      "name": { "fr": "Grand",     "en": "Big" },      "emoji": "🐘" },
+        { "id": "small",    "name": { "fr": "Petit",     "en": "Small" },    "emoji": "🐭" },
+        { "id": "fast",     "name": { "fr": "Rapide",    "en": "Fast" },     "emoji": "🏎️" },
+        { "id": "slow",     "name": { "fr": "Lent",      "en": "Slow" },     "emoji": "🐢" }
+      ]
+    },
+    {
+      "id": "beach",
+      "icon": "🏖️",
+      "color": "#fff7ed",
+      "name": { "fr": "La Plage",  "en": "The Beach" },
+      "items": [
+        { "id": "sand",     "name": { "fr": "Sable",     "en": "Sand" },     "emoji": "🏖️" },
+        { "id": "bucket",   "name": { "fr": "Seau",      "en": "Bucket" },   "emoji": "🪣" },
+        { "id": "shovel",   "name": { "fr": "Pelle",     "en": "Shovel" },   "emoji": "🪚" },
+        { "id": "towel",    "name": { "fr": "Serviette", "en": "Towel" },    "emoji": "🧣" },
+        { "id": "waves",    "name": { "fr": "Vagues",    "en": "Waves" },    "emoji": "🌊" },
+        { "id": "sunblock", "name": { "fr": "Crème",     "en": "Sunscreen" },"emoji": "🧴" }
+      ]
+    },
+    {
+      "id": "hygiene",
+      "icon": "🧼",
+      "color": "#f0fdfa",
+      "name": { "fr": "Hygiène",   "en": "Hygiene" },
+      "items": [
+        { "id": "soap",     "name": { "fr": "Savon",     "en": "Soap" },     "emoji": "🧼" },
+        { "id": "shampoo",  "name": { "fr": "Shampooing", "en": "Shampoo" }, "emoji": "🧴" },
+        { "id": "bath",     "name": { "fr": "Bain",      "en": "Bath" },     "emoji": "🛁" },
+        { "id": "comb",     "name": { "fr": "Peigne",    "en": "Comb" },     "emoji": "🪮" },
+        { "id": "brush_h",  "name": { "fr": "Brosse",    "en": "Toothbrush"},"emoji": "🪥" }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "icon": "🍴",
+      "color": "#f1f5f9",
+      "name": { "fr": "La Cuisine", "en": "The Kitchen" },
+      "items": [
+        { "id": "fork",     "name": { "fr": "Fourchette", "en": "Fork" },    "emoji": "🍴" },
+        { "id": "spoon",    "name": { "fr": "Cuillère",   "en": "Spoon" },   "emoji": "🥄" },
+        { "id": "knife",    "name": { "fr": "Couteau",    "en": "Knife" },   "emoji": "🔪" },
+        { "id": "plate",    "name": { "fr": "Assiette",   "en": "Plate" },   "emoji": "🍽️" },
+        { "id": "cup_k",    "name": { "fr": "Tasse",      "en": "Cup" },      "emoji": "🍵" },
+        { "id": "pot",      "name": { "fr": "Marmite",    "en": "Pot" },      "emoji": "🍲" }
+      ]
+    },
+    {
+      "id": "mythology",
+      "icon": "🏺",
+      "color": "#fefce8",
+      "name": { "fr": "Mythologie", "en": "Mythology" },
+      "items": [
+        { "id": "myth-zeus", "name": { "fr": "Zeus",      "en": "Zeus" },     "emoji": "⚡" },
+        { "id": "pegasus",   "name": { "fr": "Pégase",    "en": "Pegasus" },  "emoji": "🦄" },
+        { "id": "medusa",    "name": { "fr": "Méduse",    "en": "Medusa" },   "emoji": "🐍" },
+        { "id": "phoenix",   "name": { "fr": "Phénix",    "en": "Phoenix" },  "emoji": "🐦" },
+        { "id": "sphinx-m",  "name": { "fr": "Sphinx",    "en": "Sphinx" },   "emoji": "🦁" }
+      ]
+    },
+    {
+      "id": "technology",
+      "icon": "🤖",
+      "color": "#f1f5f9",
+      "name": { "fr": "Technologie", "en": "Technology" },
+      "items": [
+        { "id": "robot",     "name": { "fr": "Robot",     "en": "Robot" },    "emoji": "🤖" },
+        { "id": "laptop",    "name": { "fr": "Ordinateur", "en": "Laptop" },   "emoji": "💻" },
+        { "id": "camera_t",  "name": { "fr": "Caméra",    "en": "Camera" },   "emoji": "📷" },
+        { "id": "remote",    "name": { "fr": "Télécommande", "en": "Remote" },"emoji": "🎮" },
+        { "id": "tablet",    "name": { "fr": "Tablette",  "en": "Tablet" },   "emoji": "📱" }
+      ]
+    },
+    {
+      "id": "gardening",
+      "icon": "🧤",
+      "color": "#f0fdf4",
+      "name": { "fr": "Jardiner",  "en": "Gardening" },
+      "items": [
+        { "id": "rake",      "name": { "fr": "Râteau",    "en": "Rake" },     "emoji": "🧹" },
+        { "id": "w-can",     "name": { "fr": "Arrosoir",  "en": "Watering Can"},"emoji": "🚿" },
+        { "id": "shovel_g",  "name": { "fr": "Pelle",     "en": "Shovel" },   "emoji": "🪚" },
+        { "id": "seeds",     "name": { "fr": "Graines",   "en": "Seeds" },    "emoji": "🌱" },
+        { "id": "gloves",    "name": { "fr": "Gants",     "en": "Gloves" },   "emoji": "🧤" }
+      ]
+    },
+    {
+      "id": "arctic",
+      "icon": "🧊",
+      "color": "#f0f9ff",
+      "name": { "fr": "L'Arctique", "en": "Arctic" },
+      "items": [
+        { "id": "p-bear",    "name": { "fr": "Ours polaire","en": "Polar Bear"},"emoji": "🐻‍❄️" },
+        { "id": "igloo",     "name": { "fr": "Igloo",     "en": "Igloo" },    "emoji": "🛖" },
+        { "id": "walrus",    "name": { "fr": "Morse",     "en": "Walrus" },   "emoji": "🦭" },
+        { "id": "seal",      "name": { "fr": "Phoque",    "en": "Seal" },     "emoji": "🦭" },
+        { "id": "ice-b",     "name": { "fr": "Iceberg",   "en": "Iceberg" },  "emoji": "🧊" }
+      ]
+    },
+    {
+      "id": "safari",
+      "icon": "🦒",
+      "color": "#fefce8",
+      "name": { "fr": "Le Safari", "en": "Safari" },
+      "items": [
+        { "id": "meer",      "name": { "fr": "Suricate",  "en": "Meerkat" },  "emoji": "🦦" },
+        { "id": "rhino",     "name": { "fr": "Rhinocéros","en": "Rhinoceros"},"emoji": "🦏" },
+        { "id": "cheetah",   "name": { "fr": "Guépard",   "en": "Cheetah" },  "emoji": "🐆" },
+        { "id": "hyena",     "name": { "fr": "Hyène",     "en": "Hyena" },    "emoji": "🐺" },
+        { "id": "ostrich",   "name": { "fr": "Autruche",  "en": "Ostrich" },  "emoji": "🐦" }
+      ]
+    },
+    {
+      "id": "egypt",
+      "icon": "🏜️",
+      "color": "#fef3c7",
+      "name": { "fr": "L'Égypte",  "en": "Ancient Egypt" },
+      "items": [
+        { "id": "mummy",     "name": { "fr": "Momie",     "en": "Mummy" },    "emoji": "🩹" },
+        { "id": "sphinx-e",  "name": { "fr": "Sphinx",    "en": "Sphinx" },   "emoji": "🦁" },
+        { "id": "pharaoh",   "name": { "fr": "Pharaon",   "en": "Pharaoh" },  "emoji": "👑" },
+        { "id": "ankh",      "name": { "fr": "Ankh",      "en": "Ankh" },     "emoji": "☥" },
+        { "id": "hiero",     "name": { "fr": "Hiéroglyphe","en": "Hieroglyphs"},"emoji": "📜" }
+      ]
+    },
+    {
+      "id": "desserts",
+      "icon": "🍮",
+      "color": "#fdf2f2",
+      "name": { "fr": "Desserts",  "en": "Desserts" },
+      "items": [
+        { "id": "donut",     "name": { "fr": "Donut",     "en": "Donut" },    "emoji": "🍩" },
+        { "id": "cookie_d",  "name": { "fr": "Biscuit",   "en": "Cookie" },   "emoji": "🍪" },
+        { "id": "macaron",   "name": { "fr": "Macaron",   "en": "Macaron" },  "emoji": "🍪" },
+        { "id": "pudding",   "name": { "fr": "Pudding",   "en": "Pudding" },  "emoji": "🍮" },
+        { "id": "waffle",    "name": { "fr": "Gaufre",    "en": "Waffle" },   "emoji": "🧇" }
+      ]
+    },
+    {
+      "id": "beverages",
+      "icon": "🥤",
+      "color": "#f0f9ff",
+      "name": { "fr": "Boissons",  "en": "Beverages" },
+      "items": [
+        { "id": "juice",     "name": { "fr": "Jus",       "en": "Juice" },    "emoji": "🧃" },
+        { "id": "milk_b",    "name": { "fr": "Lait",      "en": "Milk" },     "emoji": "🥛" },
+        { "id": "tea",       "name": { "fr": "Thé",       "en": "Tea" },      "emoji": "🍵" },
+        { "id": "coffee",    "name": { "fr": "Café",      "en": "Coffee" },   "emoji": "☕" },
+        { "id": "water_b",   "name": { "fr": "Eau",       "en": "Water" },    "emoji": "💧" },
+        { "id": "soda",      "name": { "fr": "Soda",      "en": "Soda" },     "emoji": "🥤" }
+      ]
+    },
+    {
+      "id": "transplus",
+      "icon": "🛴",
+      "color": "#f1f5f9",
+      "name": { "fr": "Transports +", "en": "Transport Plus" },
+      "items": [
+        { "id": "segway",    "name": { "fr": "Segway",    "en": "Segway" },   "emoji": "🛴" },
+        { "id": "scooter_p", "name": { "fr": "Trotinette","en": "Scooter" },  "emoji": "🛴" },
+        { "id": "skate_b",   "name": { "fr": "Skate",     "en": "Skateboard"},"emoji": "🛹" },
+        { "id": "balloon_p", "name": { "fr": "Montgolfière","en": "Hot Air Balloon"},"emoji": "🎈" },
+        { "id": "submarine", "name": { "fr": "Sous-marin", "en": "Submarine"}, "emoji": "🚢" }
+      ]
+    },
+    {
+      "id": "camping",
+      "icon": "⛺",
+      "color": "#fef2f2",
+      "name": { "fr": "Le Camping", "en": "Camping" },
+      "items": [
+        { "id": "tent",      "name": { "fr": "Tente",     "en": "Tent" },     "emoji": "⛺" },
+        { "id": "fire_c",    "name": { "fr": "Feu",       "en": "Campfire" }, "emoji": "🔥" },
+        { "id": "pack",      "name": { "fr": "Sac à dos",  "en": "Backpack" }, "emoji": "🎒" },
+{ "id": "torch",     "name": { "fr": "Lampe",     "en": "Torch" },    "emoji": "🔦" },
+        { "id": "s-bag",     "name": { "fr": "Couchage",  "en": "Sleeping Bag"},"emoji": "🛌" }
+      ]
+    },
+    {
+      "id": "construction",
+      "icon": "🏗️",
+      "color": "#fff7ed",
+      "name": { "fr": "Le Chantier", "en": "Construction" },
+      "items": [
+        { "id": "const-excav","name": { "fr": "Pelleteuse", "en": "Excavator" }, "emoji": "🚜" },
+        { "id": "crane",     "name": { "fr": "Grue",      "en": "Crane" },    "emoji": "🏗️" },
+        { "id": "bulldozer", "name": { "fr": "Bulldozer", "en": "Bulldozer" },"emoji": "🚜" },
+        { "id": "helmet",    "name": { "fr": "Casque",    "en": "Hard Hat" }, "emoji": "⛑️" },
+        { "id": "brick",     "name": { "fr": "Brique",    "en": "Brick" },    "emoji": "🧱" }
+      ]
+    },
+    {
+      "id": "medical",
+      "icon": "🩺",
+      "color": "#f0fdf4",
+      "name": { "fr": "Le Docteur", "en": "Medical" },
+      "items": [
+        { "id": "stetho",    "name": { "fr": "Stéthoscope","en": "Stethoscope"},"emoji": "🩺" },
+        { "id": "band-aid",  "name": { "fr": "Pansement", "en": "Band-aid" }, "emoji": "🩹" },
+        { "id": "thermo",    "name": { "fr": "Thermomètre","en": "Thermometer"},"emoji": "🌡️" },
+        { "id": "med",       "name": { "fr": "Médicament", "en": "Medicine" }, "emoji": "💊" },
+        { "id": "amb-m",     "name": { "fr": "Ambulance", "en": "Ambulance" }, "emoji": "🚑" }
+      ]
+    },
+    {
+      "id": "monuments",
+      "icon": "🗽",
+      "color": "#fdf4ff",
+      "name": { "fr": "Monuments", "en": "Landmarks" },
+      "items": [
+        { "id": "eiffel",    "name": { "fr": "Tour Eiffel", "en": "Eiffel Tower"},"emoji": "🗼" },
+        { "id": "liberty",   "name": { "fr": "Statue",    "en": "Liberty Statue"},"emoji": "🗽" },
+        { "id": "wall",      "name": { "fr": "Muraille",  "en": "Great Wall" },"emoji": "🧱" },
+        { "id": "pyramids_l","name": { "fr": "Pyramides", "en": "Pyramids" }, "emoji": "📐" },
+        { "id": "big-ben",   "name": { "fr": "Big Ben",   "en": "Big Ben" },  "emoji": "🕰️" }
+      ]
+    },
+    {
+      "id": "comm",
+      "icon": "✉️",
+      "color": "#f1f5f9",
+      "name": { "fr": "Messages",  "en": "Communication" },
+      "items": [
+        { "id": "letter_c",  "name": { "fr": "Lettre",    "en": "Letter" },   "emoji": "✉️" },
+        { "id": "phone_c",   "name": { "fr": "Téléphone", "en": "Telephone" }, "emoji": "📞" },
+        { "id": "email_c",   "name": { "fr": "Email",     "en": "Email" },    "emoji": "📧" },
+        { "id": "sat_c",     "name": { "fr": "Satellite", "en": "Satellite" },"emoji": "📡" },
+        { "id": "radio_c",   "name": { "fr": "Radio",     "en": "Radio" },    "emoji": "📻" }
+      ]
+    },
+    {
+      "id": "classroom",
+      "icon": "🎒",
+      "color": "#fff1f2",
+      "name": { "fr": "La Classe", "en": "Classroom" },
+      "items": [
+        { "id": "blackboard","name": { "fr": "Tableau",   "en": "Blackboard" },"emoji": "🏫" },
+        { "id": "desk_c",    "name": { "fr": "Pupitre",   "en": "Desk" },     "emoji": "🪑" },
+        { "id": "chalk_c",   "name": { "fr": "Craie",     "en": "Chalk" },    "emoji": "🖍️" },
+        { "id": "globe_c",   "name": { "fr": "Globe",     "en": "Globe" },    "emoji": "🌍" },
+        { "id": "note_b",    "name": { "fr": "Cahier",    "en": "Notebook" }, "emoji": "📓" }
+      ]
+    },
+    {
+      "id": "sports_p",
+      "icon": "🎯",
+      "color": "#f0fdfa",
+      "name": { "fr": "Sports +",  "en": "Sports Plus" },
+      "items": [
+        { "id": "bowling",   "name": { "fr": "Bowling",   "en": "Bowling" },  "emoji": "🎳" },
+        { "id": "archery",   "name": { "fr": "Tir à l'arc","en": "Archery" }, "emoji": "🏹" },
+        { "id": "golf_s",    "name": { "fr": "Golf",      "en": "Golf" },     "emoji": "⛳" },
+        { "id": "surfing_s", "name": { "fr": "Surf",      "en": "Surfing" },  "emoji": "🏄" },
+        { "id": "skate_p",   "name": { "fr": "Skate",     "en": "Skateboarding"},"emoji": "🛹" }
+      ]
+    },
+    {
+      "id": "deepspace",
+      "icon": "🌌",
+      "color": "#f8fafc",
+      "name": { "fr": "Espace +",  "en": "Deep Space" },
+      "items": [
+        { "id": "galaxy",    "name": { "fr": "Galaxie",   "en": "Galaxy" },   "emoji": "🌀" },
+        { "id": "comet",     "name": { "fr": "Comète",    "en": "Comet" },    "emoji": "☄️" },
+        { "id": "meteor_c",  "name": { "fr": "Météore",   "en": "Meteor" },   "emoji": "☄️" },
+        { "id": "nebula",    "name": { "fr": "Nébuleuse", "en": "Nebula" },   "emoji": "☁️" },
+        { "id": "black-h",   "name": { "fr": "Trou Noir", "en": "Black Hole" },"emoji": "🕳️" }
+      ]
+    },
+    {
+      "id": "inst_p",
+      "icon": "🪗",
+      "color": "#fdf2f2",
+      "name": { "fr": "Musique +", "en": "Instruments Plus" },
+      "items": [
+        { "id": "accordion", "name": { "fr": "Accordéon", "en": "Accordion" },"emoji": "🪗" },
+        { "id": "harmonic",  "name": { "fr": "Harmonica", "en": "Harmonica" },"emoji": "🎷" },
+        { "id": "banjo",     "name": { "fr": "Banjo",     "en": "Banjo" },    "emoji": "🎸" },
+        { "id": "gong_c",    "name": { "fr": "Gong",      "en": "Gong" },     "emoji": "🔔" },
+        { "id": "tambo",     "name": { "fr": "Tambourin", "en": "Tambourine" },"emoji": "🥁" }
+      ]
+    },
+    {
+      "id": "super",
+      "icon": "🦸",
+      "color": "#f0f9ff",
+      "name": { "fr": "Super-héros","en": "Superheroes" },
+      "items": [
+        { "id": "mask_s",    "name": { "fr": "Masque",    "en": "Mask" },     "emoji": "👺" },
+        { "id": "shield_s",  "name": { "fr": "Bouclier",  "en": "Shield" },   "emoji": "🛡️" },
+        { "id": "strength",  "name": { "fr": "Force",     "en": "Strength" }, "emoji": "💪" },
+        { "id": "flying_s",  "name": { "fr": "Voler",     "en": "Flying" },    "emoji": "🦅" },
+        { "id": "base_s",    "name": { "fr": "Base",      "en": "Secret Base"},"emoji": "🏢" }
+      ]
+    },
+    {
+      "id": "party",
+      "icon": "🥳",
+      "color": "#fef2f2",
+      "name": { "fr": "La Fête",   "en": "Party Time" },
+      "items": [
+        { "id": "gift_p",    "name": { "fr": "Cadeau",    "en": "Gift" },     "emoji": "🎁" },
+        { "id": "p-hat",     "name": { "fr": "Chapeau",   "en": "Party Hat" }, "emoji": "🥳" },
+        { "id": "confetti",  "name": { "fr": "Confetti",  "en": "Confetti" }, "emoji": "🎊" },
+        { "id": "balloons_p","name": { "fr": "Ballons",   "en": "Balloons" }, "emoji": "🎈" },
+        { "id": "cupcake_p", "name": { "fr": "Cupcake",   "en": "Cupcake" },  "emoji": "🧁" }
+      ]
+    },
+    {
+      "id": "dinosaurs",
+      "icon": "🦖",
+      "color": "#fef3c7",
+      "name": { "fr": "Dinosaures", "en": "Dinosaurs" },
+      "items": [
+        { "id": "dino-trex", "name": { "fr": "T-Rex",      "en": "T-Rex" },    "emoji": "🦖" },
+        { "id": "tricera",  "name": { "fr": "Tricératops","en": "Triceratops"},"emoji": "🚜" },
+        { "id": "raptor",   "name": { "fr": "Raptor",     "en": "Raptor" },   "emoji": "🦅" },
+        { "id": "ptero",    "name": { "fr": "Ptéro",      "en": "Pterodactyl"},"emoji": "🦇" },
+        { "id": "stego",    "name": { "fr": "Stégo",      "en": "Stegosaurus"},"emoji": "🦎" }
+      ]
+    },
+    {
+      "id": "planets",
+      "icon": "🪐",
+      "color": "#e0e7ff",
+      "name": { "fr": "Planètes", "en": "Planets" },
+      "items": [
+        { "id": "mars",     "name": { "fr": "Mars",      "en": "Mars" },     "emoji": "🔴" },
+        { "id": "jupiter",  "name": { "fr": "Jupiter",   "en": "Jupiter" },  "emoji": "🌀" },
+        { "id": "venus",    "name": { "fr": "Vénus",     "en": "Venus" },    "emoji": "🌕" },
+        { "id": "neptune",  "name": { "fr": "Neptune",   "en": "Neptune" },  "emoji": "🔵" },
+        { "id": "mercury",  "name": { "fr": "Mercure",   "en": "Mercury" },  "emoji": "🌑" }
+      ]
+    },
+    {
+      "id": "geography",
+      "icon": "🗺️",
+      "color": "#f0fdf4",
+      "name": { "fr": "Géographie", "en": "Geography" },
+      "items": [
+        { "id": "geo-island","name": { "fr": "Île",       "en": "Island" },   "emoji": "🏝️" },
+        { "id": "volcano",  "name": { "fr": "Volcan",    "en": "Volcano" },  "emoji": "🌋" },
+        { "id": "desert",   "name": { "fr": "Désert",    "en": "Desert" },   "emoji": "🏜️" },
+        { "id": "forest",   "name": { "fr": "Forêt",     "en": "Forest" },   "emoji": "🌲" },
+        { "id": "river",    "name": { "fr": "Rivière",   "en": "River" },    "emoji": "🏞️" }
+      ]
+    },
+    {
+      "id": "time",
+      "icon": "⏰",
+      "color": "#f1f5f9",
+      "name": { "fr": "Le Temps", "en": "Time" },
+      "items": [
+        { "id": "clock",    "name": { "fr": "Horloge",   "en": "Clock" },    "emoji": "⏰" },
+        { "id": "morning",  "name": { "fr": "Matin",     "en": "Morning" },  "emoji": "☀️" },
+        { "id": "night_t",  "name": { "fr": "Nuit",      "en": "Night" },    "emoji": "🌙" },
+        { "id": "sun-r",    "name": { "fr": "Aurore",    "en": "Sunrise" },  "emoji": "🌅" },
+        { "id": "calendar", "name": { "fr": "Calendrier","en": "Calendar" }, "emoji": "📅" }
+      ]
+    },
+    {
+      "id": "shapes3d",
+      "icon": "🧊",
+      "color": "#fdf4ff",
+      "name": { "fr": "Formes 3D", "en": "3D Shapes" },
+      "items": [
+        { "id": "cube",     "name": { "fr": "Cube",      "en": "Cube" },     "emoji": "🧊" },
+        { "id": "sphere",   "name": { "fr": "Sphère",    "en": "Sphere" },   "emoji": "⚽" },
+        { "id": "pyramid_s","name": { "fr": "Pyramide",  "en": "Pyramid" },  "emoji": "📐" },
+        { "id": "cone",     "name": { "fr": "Cône",      "en": "Cone" },     "emoji": "🍦" },
+        { "id": "cylinder", "name": { "fr": "Cylindre",  "en": "Cylinder" }, "emoji": "🔋" }
+      ]
+    },
+    {
+      "id": "magic",
+      "icon": "🧙",
+      "color": "#faf5ff",
+      "name": { "fr": "La Magie", "en": "Magic" },
+      "items": [
+        { "id": "wand",     "name": { "fr": "Baguette",  "en": "Wand" },     "emoji": "🪄" },
+        { "id": "wizard-h", "name": { "fr": "Chapeau",   "en": "Wizard Hat"},"emoji": "🧙" },
+        { "id": "cape",     "name": { "fr": "Cape",       "en": "Cape" },     "emoji": "🧥" },
+        { "id": "potion",   "name": { "fr": "Potion",    "en": "Potion" },   "emoji": "🧪" },
+        { "id": "cry-b",    "name": { "fr": "Boule",     "en": "Crystal Ball"},"emoji": "🔮" }
+      ]
+    },
+    {
+      "id": "hobbies",
+      "icon": "🎨",
+      "color": "#fff7ed",
+      "name": { "fr": "Loisirs",   "en": "Hobbies" },
+      "items": [
+        { "id": "read",     "name": { "fr": "Lire",      "en": "Reading" },  "emoji": "📚" },
+        { "id": "paint",    "name": { "fr": "Peindre",   "en": "Painting" }, "emoji": "🎨" },
+        { "id": "sing-h",   "name": { "fr": "Chanter",   "en": "Singing" },  "emoji": "🎤" },
+        { "id": "dance-h",  "name": { "fr": "Danser",    "en": "Dancing" },  "emoji": "💃" },
+        { "id": "play-h",   "name": { "fr": "Jouer",     "en": "Playing" },  "emoji": "🎮" }
+      ]
+    },
+    {
+      "id": "city",
+      "icon": "🏙️",
+      "color": "#f1f5f9",
+      "name": { "fr": "La Ville",  "en": "The City" },
+      "items": [
+        { "id": "t-light",  "name": { "fr": "Feu",       "en": "Traffic Light"},"emoji": "🚦" },
+        { "id": "cross",    "name": { "fr": "Passage",   "en": "Crossing" }, "emoji": "🦓" },
+        { "id": "sky-s",    "name": { "fr": "Gratte-ciel","en": "Skyscraper"},"emoji": "🏙️" },
+        { "id": "b-stop",   "name": { "fr": "Arrêt",     "en": "Bus Stop" }, "emoji": "🚏" },
+        { "id": "park_c",   "name": { "fr": "Parc",      "en": "Park" },     "emoji": "🌳" }
+      ]
+    },
+    {
+      "id": "wildbirds",
+      "icon": "🦩",
+      "color": "#fdf2f2",
+      "name": { "fr": "Oiseaux",   "en": "Wild Birds" },
+      "items": [
+        { "id": "parrot",   "name": { "fr": "Perroquet", "en": "Parrot" },   "emoji": "🦜" },
+        { "id": "eagle",    "name": { "fr": "Aigle",     "en": "Eagle" },    "emoji": "🦅" },
+        { "id": "peng-b",   "name": { "fr": "Manchot",   "en": "Penguin" },  "emoji": "🐧" },
+        { "id": "flamin",   "name": { "fr": "Flamant",   "en": "Flamingo" }, "emoji": "🦩" },
+        { "id": "peacock",  "name": { "fr": "Paon",      "en": "Peacock" },  "emoji": "🦚" }
+      ]
+    },
+    {
+      "id": "emotplus",
+      "icon": "🎭",
+      "color": "#fefceb",
+      "name": { "fr": "Émotions +", "en": "Feelings +" },
+      "items": [
+        { "id": "surp",     "name": { "fr": "Surpris",   "en": "Surprised" },"emoji": "😲" },
+        { "id": "silly_p",  "name": { "fr": "Rigolo",    "en": "Silly" },    "emoji": "🤪" },
+        { "id": "proud",    "name": { "fr": "Fier",      "en": "Proud" },    "emoji": "😎" },
+        { "id": "shy",      "name": { "fr": "Timide",    "en": "Shy" },      "emoji": "🥺" },
+        { "id": "sleep-p",  "name": { "fr": "Fatigué",   "en": "Sleepy" },   "emoji": "🥱" }
+      ]
+    },
+    {
+      "id": "fairytales",
+      "icon": "🏰",
+      "color": "#fff1f2",
+      "name": { "fr": "Contes",     "en": "Fairy Tales" },
+      "items": [
+        { "id": "castle_f",  "name": { "fr": "Château",   "en": "Castle" },   "emoji": "🏰" },
+        { "id": "knight",    "name": { "fr": "Chevalier", "en": "Knight" },   "emoji": "🤺" },
+        { "id": "princess",  "name": { "fr": "Princesse", "en": "Princess" }, "emoji": "👸" },
+        { "id": "prince",    "name": { "fr": "Prince",    "en": "Prince" },   "emoji": "🤴" },
+        { "id": "mirror_f",  "name": { "fr": "Miroir",    "en": "Magic Mirror"},"emoji": "🪞" }
+      ]
+    },
+    {
+      "id": "rome",
+      "icon": "🏛️",
+      "color": "#fff7ed",
+      "name": { "fr": "Rome Antique","en": "Ancient Rome" },
+      "items": [
+        { "id": "colo",      "name": { "fr": "Colisée",   "en": "Colosseum" },"emoji": "🏟️" },
+        { "id": "glad",      "name": { "fr": "Gladiateur","en": "Gladiator" },"emoji": "⚔️" },
+        { "id": "toga",      "name": { "fr": "Toge",      "en": "Toga" },     "emoji": "🥋" },
+        { "id": "chariot",   "name": { "fr": "Char",      "en": "Chariot" },  "emoji": "🛒" },
+        { "id": "shield_r",  "name": { "fr": "Bouclier",  "en": "Roman Shield"},"emoji": "🛡️" }
+      ]
+    },
+    {
+      "id": "icecream",
+      "icon": "🍦",
+      "color": "#fdf2f2",
+      "name": { "fr": "Le Glacier", "en": "Ice Cream" },
+      "items": [
+        { "id": "cone_i",    "name": { "fr": "Cône",      "en": "Cone" },     "emoji": "🍦" },
+        { "id": "scoop",     "name": { "fr": "Boule",     "en": "Scoop" },    "emoji": "🍨" },
+        { "id": "syrup",     "name": { "fr": "Sirop",     "en": "Syrup" },    "emoji": "🍯" },
+        { "id": "sprink",    "name": { "fr": "Pépites",   "en": "Sprinkles" },"emoji": "✨" },
+        { "id": "sundae",    "name": { "fr": "Coupe",     "en": "Sundae" },   "emoji": "🍧" }
+      ]
+    },
+    {
+      "id": "sea_sec",
+      "icon": "⚓",
+      "color": "#f0f9ff",
+      "name": { "fr": "Secrets de Mer","en": "Sea Secrets" },
+      "items": [
+        { "id": "l-house",   "name": { "fr": "Phare",     "en": "Lighthouse" },"emoji": "🚨" },
+        { "id": "anchor",    "name": { "fr": "Ancre",     "en": "Anchor" },   "emoji": "⚓" },
+        { "id": "treasure_s","name": { "fr": "Trésor",    "en": "Treasure" }, "emoji": "💰" },
+        { "id": "map_s",     "name": { "fr": "Carte",     "en": "Map" },      "emoji": "🗺️" },
+        { "id": "hook_s",    "name": { "fr": "Crochet",   "en": "Captain Hook"},"emoji": "🪝" }
+      ]
+    },
+    {
+      "id": "healthy",
+      "icon": "🧘",
+      "color": "#f0fdf4",
+      "name": { "fr": "Vie Saine",  "en": "Healthy Habits" },
+      "items": [
+        { "id": "yoga_h",    "name": { "fr": "Yoga",      "en": "Yoga" },     "emoji": "🧘" },
+        { "id": "stretch",   "name": { "fr": "Étirement", "en": "Stretching" },"emoji": "🤸" },
+        { "id": "hug_h",     "name": { "fr": "Câlin",     "en": "Hugging" },  "emoji": "🫂" },
+        { "id": "smile_h",   "name": { "fr": "Sourire",   "en": "Smiling" },  "emoji": "😊" },
+        { "id": "rest_h",    "name": { "fr": "Repos",     "en": "Resting" },  "emoji": "😴" }
+      ]
+    },
+    {
+      "id": "music_mix",
+      "icon": "🪇",
+      "color": "#fdf2f2",
+      "name": { "fr": "Mélange Musical","en": "Music Mix" },
+      "items": [
+        { "id": "maracas",   "name": { "fr": "Maracas",   "en": "Maracas" },  "emoji": "🪇" },
+        { "id": "triangle_m","name": { "fr": "Triangle",  "en": "Triangle" }, "emoji": "📐" },
+        { "id": "flute_m",   "name": { "fr": "Flûte",     "en": "Flute" },    "emoji": "🎷" },
+        { "id": "organ_m",   "name": { "fr": "Orgue",     "en": "Organ" },    "emoji": "🎹" },
+        { "id": "lute_m",    "name": { "fr": "Luth",      "en": "Lute" },     "emoji": "🎸" }
+      ]
+    },
+    {
+      "id": "martial",
+      "icon": "🥋",
+      "color": "#f1f5f9",
+      "name": { "fr": "Arts Martiaux","en": "Martial Arts" },
+      "items": [
+        { "id": "karate",    "name": { "fr": "Karaté",    "en": "Karate" },   "emoji": "🥋" },
+        { "id": "judo",      "name": { "fr": "Judo",      "en": "Judo" },     "emoji": "🥋" },
+        { "id": "belt_m",    "name": { "fr": "Ceinture",  "en": "Belt" },     "emoji": "🎗️" },
+        { "id": "uniform_m", "name": { "fr": "Tenue",     "en": "Uniform" },  "emoji": "🥋" },
+        { "id": "kick_m",    "name": { "fr": "Coup",      "en": "Kick" },      "emoji": "🦶" }
+      ]
+    },
+    {
+      "id": "planets_p",
+      "icon": "🌑",
+      "color": "#f8fafc",
+      "name": { "fr": "Planètes +", "en": "Planets Plus" },
+      "items": [
+        { "id": "earth_p",   "name": { "fr": "Terre",     "en": "Earth" },    "emoji": "🌍" },
+        { "id": "saturn_p",  "name": { "fr": "Saturne",   "en": "Saturn" },   "emoji": "🪐" },
+        { "id": "uranus_p",  "name": { "fr": "Uranus",    "en": "Uranus" },   "emoji": "🔵" },
+        { "id": "pluto_p",   "name": { "fr": "Pluton",    "en": "Pluto" },    "emoji": "🌑" },
+        { "id": "moon_p",    "name": { "fr": "Lune",      "en": "Moon" },     "emoji": "🌙" }
+      ]
+    },
+    {
+      "id": "city_l",
+      "icon": "🚕",
+      "color": "#f1f5f9",
+      "name": { "fr": "Vie Citadine", "en": "City Life" },
+      "items": [
+        { "id": "subway",    "name": { "fr": "Métro",     "en": "Subway" },   "emoji": "🚇" },
+        { "id": "taxi",      "name": { "fr": "Taxi",      "en": "Taxi" },     "emoji": "🚕" },
+        { "id": "billboard", "name": { "fr": "Panneau",   "en": "Billboard" },"emoji": "🖼️" },
+        { "id": "fountain",  "name": { "fr": "Fontaine",  "en": "Fountain" }, "emoji": "⛲" },
+        { "id": "statue_c",  "name": { "fr": "Statue",    "en": "Statue" },   "emoji": "🗿" }
+      ]
+    },
+    {
+      "id": "heroes_e",
+      "icon": "👨‍🚒",
+      "color": "#fff1f2",
+      "name": { "fr": "Héros",      "en": "Everyday Heroes" },
+      "items": [
+        { "id": "fire_h",    "name": { "fr": "Pompier",   "en": "Firefighter"},"emoji": "👨‍🚒" },
+        { "id": "police_h",  "name": { "fr": "Policier",  "en": "Police" },   "emoji": "👮" },
+        { "id": "nurse_h",   "name": { "fr": "Infirmier", "en": "Nurse" },    "emoji": "🧑‍⚕️" },
+        { "id": "janitor",   "name": { "fr": "Agent",     "en": "Janitor" },  "emoji": "🧹" },
+        { "id": "librarian", "name": { "fr": "Bibliothécaire","en": "Librarian"},"emoji": "📚" }
+      ]
+    },
+    {
+      "id": "farmfriends",
+      "icon": "🐑",
+      "color": "#fefce8",
+      "name": { "fr": "La Ferme +",  "en": "Farm Friends" },
+      "items": [
+        { "id": "goat",      "name": { "fr": "Chèvre",    "en": "Goat" },     "emoji": "🐐" },
+        { "id": "sheep_f",   "name": { "fr": "Mouton",    "en": "Sheep" },    "emoji": "🐑" },
+        { "id": "donkey",    "name": { "fr": "Âne",       "en": "Donkey" },   "emoji": "🫏" },
+        { "id": "rooster",   "name": { "fr": "Coq",       "en": "Rooster" },  "emoji": "🐓" },
+        { "id": "hen",       "name": { "fr": "Poule",     "en": "Hen" },      "emoji": "🐔" }
+      ]
+    },
+    {
+      "id": "wildbunch",
+      "icon": "🐨",
+      "color": "#fdf4ff",
+      "name": { "fr": "La Jungle", "en": "Wild Bunch" },
+      "items": [
+        { "id": "koala",     "name": { "fr": "Koala",     "en": "Koala" },    "emoji": "🐨" },
+        { "id": "kanga",     "name": { "fr": "Kangourou", "en": "Kangaroo" }, "emoji": "🦘" },
+        { "id": "sloth",     "name": { "fr": "Paresseux", "en": "Sloth" },    "emoji": "🦥" },
+        { "id": "panda_w",   "name": { "fr": "Panda",     "en": "Panda" },    "emoji": "🐼" },
+        { "id": "gorilla",   "name": { "fr": "Gorille",   "en": "Gorilla" },  "emoji": "🦍" }
+      ]
+    },
+    {
+      "id": "feather",
+      "icon": "🦉",
+      "color": "#fff1f2",
+      "name": { "fr": "Oiseaux +", "en": "Feathered Friends" },
+      "items": [
+        { "id": "owl_f",     "name": { "fr": "Chouette",  "en": "Owl" },      "emoji": "🦉" },
+        { "id": "woodp",     "name": { "fr": "Pic-vert",  "en": "Woodpecker"},"emoji": "🐦" },
+        { "id": "swan",      "name": { "fr": "Cygne",     "en": "Swan" },     "emoji": "🦢" },
+        { "id": "humming",   "name": { "fr": "Colibri",   "en": "Hummingbird"},"emoji": "🐦" },
+        { "id": "hawk",      "name": { "fr": "Faucon",    "en": "Hawk" },     "emoji": "🦅" }
+      ]
+    },
+    {
+      "id": "forestlife",
+      "icon": "🦊",
+      "color": "#f0fdf4",
+      "name": { "fr": "La Forêt",  "en": "Forest Life" },
+      "items": [
+        { "id": "squirrel",  "name": { "fr": "Écureuil",  "en": "Squirrel" }, "emoji": "🐿️" },
+        { "id": "deer_f",    "name": { "fr": "Biche",     "en": "Deer" },     "emoji": "🦌" },
+        { "id": "fox_f",     "name": { "fr": "Renard",    "en": "Fox" },      "emoji": "🦊" },
+        { "id": "badger",    "name": { "fr": "Blaireau",  "en": "Badger" },   "emoji": "🦡" },
+        { "id": "hedgehog",  "name": { "fr": "Hérisson",  "en": "Hedgehog" }, "emoji": "🦔" }
+      ]
+    },
+    {
+      "id": "flowers",
+      "icon": "🌻",
+      "color": "#fff7ed",
+      "name": { "fr": "Le Jardin", "en": "Flower Garden" },
+      "items": [
+        { "id": "rose",      "name": { "fr": "Rose",      "en": "Rose" },     "emoji": "🌹" },
+        { "id": "tulip",     "name": { "fr": "Tulipe",    "en": "Tulip" },    "emoji": "🌷" },
+        { "id": "sunflow",   "name": { "fr": "Tournesol", "en": "Sunflower" },"emoji": "🌻" },
+        { "id": "daisy",     "name": { "fr": "Marguerite","en": "Daisy" },    "emoji": "🌼" },
+        { "id": "poppy",     "name": { "fr": "Coquelicot","en": "Poppy" },    "emoji": "🌺" }
+      ]
+    },
+    {
+      "id": "routine_m",
+      "icon": "🚿",
+      "color": "#f0f9ff",
+      "name": { "fr": "Ma Routine", "en": "Morning Routine" },
+      "items": [
+        { "id": "dressing",  "name": { "fr": "S'habiller","en": "Dressing" }, "emoji": "👕" },
+        { "id": "brushhair", "name": { "fr": "Se coiffer", "en": "Brushing" }, "emoji": "🪮" },
+        { "id": "shoes_r",   "name": { "fr": "Chaussures","en": "Shoes"    }, "emoji": "👟" },
+        { "id": "breakfast", "name": { "fr": "Petit déj", "en": "Breakfast" },"emoji": "🥣" },
+        { "id": "schoolbag", "name": { "fr": "Cartable",  "en": "Schoolbag" },"emoji": "🎒" }
+      ]
+    },
+    {
+      "id": "kitchenkit",
+      "icon": "🍞",
+      "color": "#fdf2f2",
+      "name": { "fr": "Ma Cuisine", "en": "Kitchen Kit" },
+      "items": [
+        { "id": "toaster",   "name": { "fr": "Grille-pain","en": "Toaster" }, "emoji": "🍞" },
+        { "id": "kettle",    "name": { "fr": "Bouilloire", "en": "Kettle" },  "emoji": "🫖" },
+        { "id": "micro",     "name": { "fr": "Micro-ondes","en": "Microwave"},"emoji": "📟" },
+        { "id": "blender",   "name": { "fr": "Mixeur",    "en": "Blender" },  "emoji": "🥤" },
+        { "id": "oven",      "name": { "fr": "Four",      "en": "Oven"    },  "emoji": "🔥" }
+      ]
+    },
+    {
+      "id": "handytools",
+      "icon": "🛠️",
+      "color": "#f1f5f9",
+      "name": { "fr": "Bricolage",  "en": "Handy Tools" },
+      "items": [
+        { "id": "drill",     "name": { "fr": "Perceuse",  "en": "Drill" },    "emoji": "⚙️" },
+        { "id": "saw_h",     "name": { "fr": "Scie",      "en": "Saw"   },    "emoji": "🪚" },
+        { "id": "wrench_h",  "name": { "fr": "Clé",       "en": "Wrench" },   "emoji": "🔧" },
+        { "id": "plier_h",   "name": { "fr": "Pince",     "en": "Plier" },    "emoji": "✂️" },
+        { "id": "screw_h",   "name": { "fr": "Tournevis", "en": "Screwdriver"},"emoji": "🪛" }
+      ]
+    },
+    {
+      "id": "oppo_p",
+      "icon": "⚖️",
+      "color": "#f8fafc",
+      "name": { "fr": "Les Contraires","en": "Opposites Plus" },
+      "items": [
+        { "id": "hot-cold",  "name": { "fr": "Chaud/Froid","en": "Hot/Cold" }, "emoji": "🌡️" },
+        { "id": "fast-slow", "name": { "fr": "Vite/Lent", "en": "Fast/Slow" },"emoji": "🐢" },
+        { "id": "soft-hard", "name": { "fr": "Mou/Dur",   "en": "Soft/Hard" },"emoji": "🪨" },
+        { "id": "quiet-loud","name": { "fr": "Calme/Fort","en": "Quiet/Loud" },"emoji": "📢" },
+        { "id": "heavy-light","name": { "fr": "Lourd/Léger","en": "Heavy/Light"},"emoji": "⚖️" }
+      ]
+    },
+    {
+      "id": "superfood",
+      "icon": "🥗",
+      "color": "#f0fdfa",
+      "name": { "fr": "Super Aliments", "en": "Super Foods" },
+      "items": [
+        { "id": "salad",     "name": { "fr": "Salade",    "en": "Salad" },    "emoji": "🥗" },
+        { "id": "soup",      "name": { "fr": "Soupe",     "en": "Soup" },     "emoji": "🥣" },
+        { "id": "nuts",      "name": { "fr": "Noix",      "en": "Nuts" },     "emoji": "🥜" },
+        { "id": "avo",       "name": { "fr": "Avocat",    "en": "Avocado" },  "emoji": "🥑" },
+        { "id": "berry",     "name": { "fr": "Myrtilles", "en": "Blueberries"},"emoji": "🫐" }
+      ]
+    },
+    {
+      "id": "orchestra",
+      "icon": "🎻",
+      "color": "#fff7ed",
+      "name": { "fr": "L'Orchestre", "en": "Orchestra" },
+      "items": [
+        { "id": "cello",     "name": { "fr": "Violoncelle","en": "Cello" },    "emoji": "🎻" },
+        { "id": "oboe",      "name": { "fr": "Hautbois",  "en": "Oboe" },     "emoji": "🎷" },
+        { "id": "tuba",      "name": { "fr": "Tuba",      "en": "Tuba" },     "emoji": "🎺" },
+        { "id": "harp",      "name": { "fr": "Harpe",     "en": "Harp" },     "emoji": "🪕" },
+        { "id": "doubleb",   "name": { "fr": "Contrebasse","en": "Double Bass"},"emoji": "🎻" }
+      ]
+    },
+    {
+      "id": "olympic",
+      "icon": "🤺",
+      "color": "#f1f5f9",
+      "name": { "fr": "Jeux Olympiques", "en": "Olympic Sports" },
+      "items": [
+        { "id": "gymnast",   "name": { "fr": "Gymnastique","en": "Gymnastics"},"emoji": "🤸" },
+        { "id": "fencing_o", "name": { "fr": "Escrime",   "en": "Fencing" },  "emoji": "🤺" },
+        { "id": "weights",   "name": { "fr": "Haltères",  "en": "Weights" },  "emoji": "🏋️" },
+        { "id": "boxing",    "name": { "fr": "Boxe",      "en": "Boxing" },   "emoji": "🥊" },
+        { "id": "wrestl",    "name": { "fr": "Lutte",     "en": "Wrestling" },"emoji": "🤼" }
+      ]
+    },
+    {
+      "id": "supplies",
+      "icon": "✂️",
+      "color": "#f0f9ff",
+      "name": { "fr": "Fournitures", "en": "School Supplies" },
+      "items": [
+        { "id": "sciss_s",   "name": { "fr": "Ciseaux",   "en": "Scissors" }, "emoji": "✂️" },
+        { "id": "glue_s",    "name": { "fr": "Colle",     "en": "Glue" },     "emoji": "🧪" },
+        { "id": "eraser_s",  "name": { "fr": "Gomme",     "en": "Eraser" },   "emoji": "🧼" },
+        { "id": "sharp_s",   "name": { "fr": "Taille-crayon","en": "Sharpener"},"emoji": "✏️" },
+        { "id": "calc_s",    "name": { "fr": "Calculatrice","en": "Calculator"},"emoji": "🔢" }
+      ]
+    },
+    {
+      "id": "weather_w",
+      "icon": "🌫️",
+      "color": "#f8fafc",
+      "name": { "fr": "Météo +",    "en": "Weather Watch" },
+      "items": [
+        { "id": "fog_w",     "name": { "fr": "Brouillard","en": "Fog" },      "emoji": "🌫️" },
+        { "id": "frost_w",   "name": { "fr": "Givre",     "en": "Frost" },    "emoji": "❄️" },
+        { "id": "blizz_w",   "name": { "fr": "Blizzard",  "en": "Blizzard" }, "emoji": "🌨️" },
+        { "id": "storm_w",   "name": { "fr": "Orage",     "en": "Storm" },    "emoji": "🌩️" },
+        { "id": "torna_w",   "name": { "fr": "Tornade",   "en": "Tornado" },  "emoji": "🌪️" }
+      ]
+    },
+    {
+      "id": "nature_w",
+      "icon": "🌊",
+      "color": "#f0fdfa",
+      "name": { "fr": "Merveilles", "en": "Nature Wonders" },
+      "items": [
+        { "id": "waterfall", "name": { "fr": "Cascade",   "en": "Waterfall" },"emoji": "🌊" },
+        { "id": "valley_w",  "name": { "fr": "Vallée",    "en": "Valley" },   "emoji": "⛰️" },
+        { "id": "canyon_w",  "name": { "fr": "Canyon",    "en": "Canyon" },   "emoji": "🏜️" },
+        { "id": "cave_w",    "name": { "fr": "Grotte",    "en": "Cave" },     "emoji": "🕳️" },
+        { "id": "oasis_w",   "name": { "fr": "Oasis",     "en": "Oasis" },    "emoji": "🌴" }
+      ]
+    },
+    {
+      "id": "metals",
+      "icon": "🥈",
+      "color": "#f1f5f9",
+      "name": { "fr": "Couleurs Métal", "en": "Metal Colors" },
+      "items": [
+        { "id": "gold_m",    "name": { "fr": "Or",        "en": "Gold" },     "emoji": "🥇" },
+        { "id": "silver_m",  "name": { "fr": "Argent",    "en": "Silver" },   "emoji": "🥈" },
+        { "id": "bronze_m",  "name": { "fr": "Bronze",    "en": "Bronze" },   "emoji": "🥉" },
+        { "id": "copper_m",  "name": { "fr": "Cuivre",    "en": "Copper" },   "emoji": "🪙" },
+        { "id": "platinum_m","name": { "fr": "Platine",   "en": "Platinum" }, "emoji": "💍" }
+      ]
+    },
+    {
+      "id": "geom_p",
+      "icon": "📐",
+      "color": "#fdf4ff",
+      "name": { "fr": "Géométrie +", "en": "Geometry Plus" },
+      "items": [
+        { "id": "torus_p",   "name": { "fr": "Tore",      "en": "Torus" },    "emoji": "🍩" },
+        { "id": "prism_p",   "name": { "fr": "Prisme",    "en": "Prism" },    "emoji": "💎" },
+        { "id": "dodeca_p",  "name": { "fr": "Dodécaèdre","en": "Dodecahedron"},"emoji": "🎲" },
+        { "id": "octo_p",    "name": { "fr": "Octogone",  "en": "Octagon" },  "emoji": "🛑" },
+        { "id": "star_p",    "name": { "fr": "Étoile",    "en": "Star" },     "emoji": "⭐" }
+      ]
+    },
+    {
+      "id": "homemore",
+      "icon": "🏠",
+      "color": "#fff7ed",
+      "name": { "fr": "Ma Maison +", "en": "Home Sweet Home" },
+      "items": [
+        { "id": "attic",     "name": { "fr": "Grenier",   "en": "Attic" },    "emoji": "📦" },
+        { "id": "basem",     "name": { "fr": "Sous-sol",  "en": "Basement" }, "emoji": "🏮" },
+        { "id": "balcony",   "name": { "fr": "Balcon",    "en": "Balcony" },  "emoji": "🪴" },
+        { "id": "stairs",    "name": { "fr": "Escalier",  "en": "Stairs" },   "emoji": "🪜" },
+        { "id": "chimney",   "name": { "fr": "Cheminée",  "en": "Chimney" },  "emoji": "🏠" }
+      ]
+    },
+    {
+      "id": "winter_w",
+      "icon": "🧤",
+      "color": "#f0f9ff",
+      "name": { "fr": "Hiver",      "en": "Winter Wear" },
+      "items": [
+        { "id": "scarf_w",   "name": { "fr": "Écharpe",   "en": "Scarf" },    "emoji": "🧣" },
+        { "id": "mittens_w", "name": { "fr": "Moufle",    "en": "Mittens" },  "emoji": "🧤" },
+        { "id": "earmuff",   "name": { "fr": "Cache-oreilles","en": "Ear Muffs"},"emoji": "🎧" },
+        { "id": "boots_w",   "name": { "fr": "Bottes",    "en": "Boots" },    "emoji": "🥾" },
+        { "id": "parka",     "name": { "fr": "Parka",     "en": "Parka" },    "emoji": "🧥" }
+      ]
+    },
+    {
+      "id": "greece",
+      "icon": "🏛️",
+      "color": "#fff1f2",
+      "name": { "fr": "Grèce Antique", "en": "Ancient Greece" },
+      "items": [
+        { "id": "parth",     "name": { "fr": "Parthénon", "en": "Parthenon" },"emoji": "🏛️" },
+        { "id": "laurel",    "name": { "fr": "Laurier",   "en": "Laurel Wreath"},"emoji": "🌿" },
+        { "id": "g-mask",    "name": { "fr": "Masque",    "en": "Greek Mask" },"emoji": "🎭" },
+        { "id": "column",    "name": { "fr": "Colonne",   "en": "Column" },   "emoji": "🏛️" },
+        { "id": "amphora",   "name": { "fr": "Amphore",   "en": "Amphora" },  "emoji": "🏺" }
+      ]
+    }
+  ],
+  "stickers": [
+    { "id": "s1", "emoji": "🦄", "name": { "fr": "Licorne", "en": "Unicorn" } },
+    { "id": "s2", "emoji": "🐉", "name": { "fr": "Dragon", "en": "Dragon" } },
+    { "id": "s3", "emoji": "🦖", "name": { "fr": "Dinosaure", "en": "Dino" } },
+    { "id": "s4", "emoji": "🧚", "name": { "fr": "Fée", "en": "Fairy" } },
+    { "id": "s5", "emoji": "🧜", "name": { "fr": "Sirène", "en": "Mermaid" } },
+    { "id": "s6", "emoji": "🌈", "name": { "fr": "Arc-en-ciel", "en": "Rainbow" } },
+    { "id": "s7", "emoji": "🚀", "name": { "fr": "Fusée", "en": "Rocket" } },
+    { "id": "s8", "emoji": "🛸", "name": { "fr": "OVNI", "en": "UFO" } },
+    { "id": "s9", "emoji": "🍦", "name": { "fr": "Glace", "en": "Ice Cream" } },
+    { "id": "s10", "emoji": "🎨", "name": { "fr": "Peinture", "en": "Paint" } },
+    { "id": "s11", "emoji": "🏆", "name": { "fr": "Trophée", "en": "Trophy" } },
+    { "id": "s12", "emoji": "🧸", "name": { "fr": "Nounours", "en": "Teddy" } },
+    { "id": "s13", "emoji": "🍕", "name": { "fr": "Pizza", "en": "Pizza" } },
+    { "id": "s14", "emoji": "🍭", "name": { "fr": "Sucette", "en": "Lollipop" } },
+    { "id": "s15", "emoji": "🎈", "name": { "fr": "Ballon", "en": "Balloon" } },
+    { "id": "s16", "emoji": "🎁", "name": { "fr": "Cadeau", "en": "Gift" } }
+  ],
+  "ui": {
+    "greeting":       { "fr": "Salut, je suis Pandy !", "en": "Hi, I'm Pandy!" },
+    "play_together":  { "fr": "Choisis une catégorie !", "en": "Pick a category!" },
+    "math":           { "fr": "Maths", "en": "Math" },
+    "words":          { "fr": "Mots", "en": "Words" },
+    "book":           { "fr": "Livre d'images", "en": "Sticker Book" },
+    "bravo":          { "fr": "BRAVO !", "en": "BRAVO!" },
+    "oops":           { "fr": "Oups !", "en": "Oops!" },
+    "math_task_easy": { "fr": "Combien y a-t-il de 🍎 ?", "en": "How many 🍎 are there?" },
+    "math_task_hard": { "fr": "Fabrique le nombre {n} !", "en": "Build the number {n}!" },
+    "touch_item":     { "fr": "Touche : {name}", "en": "Touch: {name}" },
+    "learn_item":     { "fr": "C'est… {name} !", "en": "This is… {name}!" },
+    "quiz_mode":      { "fr": "Mode Quiz", "en": "Quiz Mode" },
+    "flash_mode":     { "fr": "Flashcard", "en": "Flashcard" },
+    "difficulty":     { "fr": "Niveau", "en": "Level" },
+    "easy":           { "fr": "Facile (1-10)", "en": "Easy (1-10)" },
+    "medium":         { "fr": "Moyen (1-50)", "en": "Medium (1-50)" },
+    "hard":           { "fr": "Difficile (1-99)","en": "Hard (1-99)" },
+    "get_sticker":    { "fr": "Nouveau Sticker (5 ⭐)", "en": "Get Sticker (5 ⭐)" },
+    "unlock_all":     { "fr": "Bravo ! Tout est fini !", "en": "Wow! You got them all!" },
+    "need_stars":     { "fr": "Il te faut 5 étoiles !", "en": "You need 5 stars!" },
+    "playground":     { "fr": "Terrain de jeu", "en": "Playground" },
+    "playground_hint":{ "fr": "Déplace tes stickers !", "en": "Move your stickers!" }
+  }
+}
