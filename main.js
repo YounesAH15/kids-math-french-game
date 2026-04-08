@@ -185,6 +185,15 @@ const MathGame = {
     tens: 0,
     units: 0,
     initialized: false,
+    currentItem: null,
+
+    getRandomItem() {
+        const categories = ["food", "animals", "vehicles", "household", "farm_friends", "wild_bunch", "feathered_friends", "forest_life", "flower_garden"];
+        const pool = gameData.categories
+            .filter(c => categories.includes(c.id))
+            .flatMap(c => c.items);
+        return pool[Math.floor(Math.random() * pool.length)] || { id: 'apple', name: { fr: 'Pomme', en: 'Apple' }, emoji: '🍎', image: '/assets/apple.png' };
+    },
 
     init() {
         if (!this.initialized) { this.createScene(); this.initialized = true; }
@@ -224,14 +233,24 @@ const MathGame = {
         this.startEasyLevel();
     },
 
-    // Easy: count visible apples (1–10)
+    // Easy: count visible items (1–10)
     startEasyLevel() {
+        this.currentItem = this.getRandomItem();
         this.target = Math.floor(Math.random() * (this.difficulty === 'easy' ? 6 : this.difficulty === 'medium' ? 9 : 12)) + 2;
         const scene = document.getElementById('math-scene');
+        
+        const itemName = this.currentItem.name[lang.locale];
+        const visual = this.currentItem.image 
+            ? `<img src="${this.currentItem.image.startsWith('/') ? '' : '/'}${this.currentItem.image}" class="count-apple" alt="${itemName}" onerror="this.outerHTML='<span class=count-emoji>${this.currentItem.emoji}</span>'">`
+            : `<span class="count-emoji">${this.currentItem.emoji}</span>`;
+
         scene.innerHTML = `
-            <div class="task-info"><p>${lang.t('math_task_easy')}</p></div>
-            <div class="count-grid">
-                ${Array.from({length: this.target}, () => `<img src="assets/apple.png" class="count-apple" alt="apple">`).join('')}
+            <div class="task-info">
+                <p>${lang.t('math_task_easy').replace('🍎', this.currentItem.emoji)}</p>
+                <p><small style="opacity:0.6">(${itemName})</small></p>
+            </div>
+            <div class="count-grid" style="grid-template-columns: repeat(${this.target > 6 ? 5 : 4}, 1fr)">
+                ${Array.from({length: this.target}, () => visual).join('')}
             </div>
             <div class="answer-row">
                 ${[...Array(this.target + 3).keys()].slice(1).sort(() => Math.random()-0.5).slice(0,4).concat([this.target])
@@ -396,7 +415,7 @@ const VocabularyGame = {
         }
         const item = items[this.flashIndex];
         const visual = item.image
-            ? `<img class="flash-img" src="${item.image}" alt="${item.name[lang.locale]}" onerror="this.parentNode.innerHTML='<span class=flash-emoji>${item.emoji||'❓'}</span>'">`
+            ? `<img class="flash-img" src="${item.image.startsWith('/') ? '' : '/'}${item.image}" alt="${item.name[lang.locale]}" onerror="this.parentNode.innerHTML='<span class=flash-emoji>${item.emoji||'❓'}</span>'">`
             : `<span class="flash-emoji">${item.emoji || '❓'}</span>`;
 
         document.getElementById('vocab-scene').innerHTML = `
@@ -433,7 +452,7 @@ const VocabularyGame = {
         this.target = pool[Math.floor(Math.random() * pool.length)];
 
         const visual = (item) => item.image
-            ? `<img class="item-img" src="${item.image}" alt="${item.name[lang.locale]}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">${item.emoji ? `<span class="emoji-fallback" style="display:none">${item.emoji}</span>` : ''}`
+            ? `<img class="item-img" src="${item.image.startsWith('/') ? '' : '/'}${item.image}" alt="${item.name[lang.locale]}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">${item.emoji ? `<span class="emoji-fallback" style="display:none">${item.emoji}</span>` : ''}`
             : `<span class="item-emoji">${item.emoji || '❓'}</span>`;
 
         document.getElementById('vocab-scene').innerHTML = `
