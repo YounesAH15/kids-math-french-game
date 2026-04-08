@@ -38,7 +38,7 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/kids-math-french-game.git
+   git clone https://github.com/YounesAH15/kids-math-french-game.git
    ```
 2. **Install dependencies** (using Vite):
    ```bash
