@@ -4,7 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="LudiKids — Jeu éducatif bilingue pour enfants de 3 ans. Apprenez les maths et le vocabulaire en français et en anglais avec Pandy le Panda !">
+    <meta name="theme-color" content="#ffde59">
+
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LudiKids 🐼 — Bilingual Learning Game for Kids">
+    <meta property="og:description" content="100 categories, FR/EN bilingual, maths & vocabulary for toddlers aged 3+. Built with Vanilla JS, Web Speech API & Capacitor.">
+    <meta property="og:image" content="https://ludikids.vercel.app/assets/mascot.png">
+    <meta property="og:url" content="https://ludikids.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+
     <title>LudiKids 🐼 — Apprendre en jouant</title>
+
+    <!-- Favicon: panda emoji SVG (no extra file needed) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐼</text></svg>">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +32,12 @@
                 <img src="/assets/star.png" alt="Étoile" class="star-icon">
                 <span id="star-count">0</span>
             </div>
-            <button id="sticker-book-btn" class="header-btn" title="Livre">📖</button>
-            <button id="playground-btn" class="header-btn" title="Terrain de jeu">🏞️</button>
             <h1 id="game-title">Salut, je suis Pandy !</h1>
-            <button id="lang-toggle">🌐 EN</button>
+            <div class="header-actions">
+                <button id="sticker-book-btn" class="header-btn" title="Livre de stickers" aria-label="Ouvrir le livre de stickers">📖</button>
+                <button id="playground-btn" class="header-btn" title="Terrain de jeu" aria-label="Ouvrir le terrain de jeu">🏞️</button>
+                <button id="lang-toggle" aria-label="Changer de langue">🌐 EN</button>
+            </div>
         </header>
 
     <main id="game-viewport">
@@ -43,7 +59,7 @@
     </main>
 
     <footer id="game-footer">
-        <button id="home-btn" class="footer-btn" title="Accueil">🏠</button>
+        <button id="home-btn" class="footer-btn" title="Retour à l'accueil" aria-label="Retour à l'accueil">🏠</button>
     </footer>
 
     <!-- Reward Overlay -->

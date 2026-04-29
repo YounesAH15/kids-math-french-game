@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">LudiKids</string>
+    <string name="title_activity_main">LudiKids</string>
+    <string name="package_name">com.ludikids.app</string>
+    <string name="custom_url_scheme">com.ludikids.app</string>
+</resources>

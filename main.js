@@ -1,3 +1,4 @@
+
 import './style.css'
 import gameData from './data.json'
 import { LanguageManager } from './lang.js'
@@ -28,15 +29,15 @@ class SoundManager {
             gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
             osc.start(ctx.currentTime);
             osc.stop(ctx.currentTime + dur);
-        } catch(e) { /* silently fail on browsers that block autoplay */ }
+        } catch (e) { /* silently fail on browsers that block autoplay */ }
     }
 
     static play(effect) {
-        switch(effect) {
-            case 'pop':         this.beep(660, 0.1, 'sine'); break;
-            case 'success':     this.beep(523, 0.1); setTimeout(() => this.beep(659, 0.1), 120); setTimeout(() => this.beep(784, 0.2), 240); break;
-            case 'error':       this.beep(220, 0.3, 'sawtooth', 0.2); break;
-            case 'flip':        this.beep(880, 0.08, 'triangle'); break;
+        switch (effect) {
+            case 'pop': this.beep(660, 0.1, 'sine'); break;
+            case 'success': this.beep(523, 0.1); setTimeout(() => this.beep(659, 0.1), 120); setTimeout(() => this.beep(784, 0.2), 240); break;
+            case 'error': this.beep(220, 0.3, 'sawtooth', 0.2); break;
+            case 'flip': this.beep(880, 0.08, 'triangle'); break;
         }
     }
 }
@@ -61,7 +62,7 @@ class VoiceManager {
         if (!text) return;
         this.synth.cancel(); // Stop any current speech
         const utter = new SpeechSynthesisUtterance(text);
-        
+
         // Try to find a matching voice
         const langCode = locale === 'fr' ? 'fr-FR' : 'en-US';
         const voice = this.voices.find(v => v.lang.startsWith(langCode)) || this.voices[0];
@@ -69,7 +70,7 @@ class VoiceManager {
         utter.lang = langCode;
         utter.rate = 0.9; // Slightly slower for kids
         utter.pitch = 1.1; // Slightly higher/cuter
-        
+
         this.synth.speak(utter);
     }
 }
@@ -121,11 +122,11 @@ class GameState {
 
     createConfetti() {
         const overlay = document.getElementById('reward-overlay');
-        const colors = ['#ffde59','#5ce1e6','#ff914d','#a855f7','#22c55e','#ffffff'];
+        const colors = ['#ffde59', '#5ce1e6', '#ff914d', '#a855f7', '#22c55e', '#ffffff'];
         for (let i = 0; i < 40; i++) {
             const c = document.createElement('div');
             c.className = 'confetti';
-            c.style.cssText = `left:${Math.random()*100}%; background:${colors[Math.floor(Math.random()*colors.length)]}; width:${6+Math.random()*8}px; height:${6+Math.random()*8}px; animation-delay:${Math.random()*0.8}s; animation-duration:${1.5+Math.random()*0.8}s`;
+            c.style.cssText = `left:${Math.random() * 100}%; background:${colors[Math.floor(Math.random() * colors.length)]}; width:${6 + Math.random() * 8}px; height:${6 + Math.random() * 8}px; animation-delay:${Math.random() * 0.8}s; animation-duration:${1.5 + Math.random() * 0.8}s`;
             overlay.appendChild(c);
             setTimeout(() => c.remove(), 2200);
         }
@@ -238,9 +239,9 @@ const MathGame = {
         this.currentItem = this.getRandomItem();
         this.target = Math.floor(Math.random() * (this.difficulty === 'easy' ? 6 : this.difficulty === 'medium' ? 9 : 12)) + 2;
         const scene = document.getElementById('math-scene');
-        
+
         const itemName = this.currentItem.name[lang.locale];
-        const visual = this.currentItem.image 
+        const visual = this.currentItem.image
             ? `<img src="${this.currentItem.image.startsWith('/') ? '' : '/'}${this.currentItem.image}" class="count-apple" alt="${itemName}" onerror="this.outerHTML='<span class=count-emoji>${this.currentItem.emoji}</span>'">`
             : `<span class="count-emoji">${this.currentItem.emoji}</span>`;
 
@@ -250,12 +251,12 @@ const MathGame = {
                 <p><small style="opacity:0.6">(${itemName})</small></p>
             </div>
             <div class="count-grid" style="grid-template-columns: repeat(${this.target > 6 ? 5 : 4}, 1fr)">
-                ${Array.from({length: this.target}, () => visual).join('')}
+                ${Array.from({ length: this.target }, () => visual).join('')}
             </div>
             <div class="answer-row">
-                ${[...Array(this.target + 3).keys()].slice(1).sort(() => Math.random()-0.5).slice(0,4).concat([this.target])
-                    .filter((v,i,a) => a.indexOf(v)===i).sort(() => Math.random()-0.5)
-                    .map(n => `<button class="answer-btn" onclick="MathGame.checkCount(${n})">${n}</button>`).join('')}
+                ${[...Array(this.target + 3).keys()].slice(1).sort(() => Math.random() - 0.5).slice(0, 4).concat([this.target])
+                .filter((v, i, a) => a.indexOf(v) === i).sort(() => Math.random() - 0.5)
+                .map(n => `<button class="answer-btn" onclick="MathGame.checkCount(${n})">${n}</button>`).join('')}
             </div>
         `;
     },
@@ -271,7 +272,7 @@ const MathGame = {
 
     // Hard mode: build the number with tens bars and unit beads
     startBuildLevel() {
-        const ranges = { easy: [5,15], medium: [10,50], hard: [20,99] };
+        const ranges = { easy: [5, 15], medium: [10, 50], hard: [20, 99] };
         const [min, max] = ranges[this.difficulty];
         this.target = Math.floor(Math.random() * (max - min)) + min;
         this.tens = 0; this.units = 0;
@@ -415,7 +416,7 @@ const VocabularyGame = {
         }
         const item = items[this.flashIndex];
         const visual = item.image
-            ? `<img class="flash-img" src="${item.image.startsWith('/') ? '' : '/'}${item.image}" alt="${item.name[lang.locale]}" onerror="this.parentNode.innerHTML='<span class=flash-emoji>${item.emoji||'❓'}</span>'">`
+            ? `<img class="flash-img" src="${item.image.startsWith('/') ? '' : '/'}${item.image}" alt="${item.name[lang.locale]}" onerror="this.parentNode.innerHTML='<span class=flash-emoji>${item.emoji || '❓'}</span>'">`
             : `<span class="flash-emoji">${item.emoji || '❓'}</span>`;
 
         document.getElementById('vocab-scene').innerHTML = `
@@ -508,11 +509,11 @@ const StickerBook = {
             <div class="task-info"><p>${lang.t('book')}</p></div>
             <div class="sticker-grid">
                 ${gameData.stickers.map(s => {
-                    const isUnlocked = state.unlockedStickers.includes(s.id);
-                    return `<div class="sticker-item ${isUnlocked ? '' : 'locked'}" title="${isUnlocked ? s.name[lang.locale] : '?'}">
+            const isUnlocked = state.unlockedStickers.includes(s.id);
+            return `<div class="sticker-item ${isUnlocked ? '' : 'locked'}" title="${isUnlocked ? s.name[lang.locale] : '?'}">
                         ${isUnlocked ? s.emoji : '❓'}
                     </div>`;
-                }).join('')}
+        }).join('')}
             </div>
             ${unlocked < total ? `
                 <button class="unlock-btn ${state.stars >= 5 ? '' : 'disabled'}" onclick="StickerBook.unlock()">
@@ -537,7 +538,7 @@ const StickerBook = {
         state.unlockSticker(random.id);
         SoundManager.play('success');
         this.render();
-        
+
         // Add pop animation to the newly unlocked sticker
         setTimeout(() => {
             const items = document.querySelectorAll('.sticker-item');
@@ -578,18 +579,18 @@ const Playground = {
     render() {
         const scene = document.getElementById('playground-scene');
         const unlockedStickers = state.unlockedStickers.map(id => gameData.stickers.find(s => s.id === id));
-        
+
         scene.innerHTML = `
             <div class="playground-hint">${lang.t('playground_hint')}</div>
             ${unlockedStickers.map(s => {
-                const pos = this.positions[s.id] || { x: Math.random() * 70 + 15, y: Math.random() * 70 + 15 };
-                return `<div class="draggable-sticker" 
+            const pos = this.positions[s.id] || { x: Math.random() * 70 + 15, y: Math.random() * 70 + 15 };
+            return `<div class="draggable-sticker" 
                              data-id="${s.id}" 
                              style="left:${pos.x}%; top:${pos.y}%"
                              onpointerdown="Playground.startDrag(event)">
                     ${s.emoji}
                 </div>`;
-            }).join('')}
+        }).join('')}
             <button class="back-btn" style="position:absolute; bottom:10px; left:10px;" onclick="SceneManager.showScene('intro-scene')">🏠</button>
         `;
     },
@@ -597,19 +598,19 @@ const Playground = {
     startDrag(e) {
         const el = e.target;
         el.setPointerCapture(e.pointerId);
-        
+
         const onMove = (me) => {
             const rect = el.parentElement.getBoundingClientRect();
             const x = ((me.clientX - rect.left) / rect.width) * 100;
             const y = ((me.clientY - rect.top) / rect.height) * 100;
-            
+
             // Constrain
             const cx = Math.max(5, Math.min(90, x));
             const cy = Math.max(5, Math.min(90, y));
-            
+
             el.style.left = `${cx}%`;
             el.style.top = `${cy}%`;
-            
+
             this.positions[el.dataset.id] = { x: cx, y: cy };
         };
 
@@ -627,11 +628,11 @@ const Playground = {
 window.Playground = Playground;
 
 // ─── Event Listeners ──────────────────────────────────────────────────────────
-document.getElementById('math-btn').onclick    = () => MathGame.init();
-document.getElementById('french-btn').onclick  = () => VocabularyGame.init();
+document.getElementById('math-btn').onclick = () => MathGame.init();
+document.getElementById('french-btn').onclick = () => VocabularyGame.init();
 document.getElementById('sticker-book-btn').onclick = () => StickerBook.init();
-document.getElementById('playground-btn').onclick   = () => Playground.init();
-document.getElementById('home-btn').onclick    = () => {
+document.getElementById('playground-btn').onclick = () => Playground.init();
+document.getElementById('home-btn').onclick = () => {
     SceneManager.showScene('intro-scene');
     refreshIntro();
 };
@@ -640,6 +641,6 @@ document.getElementById('lang-toggle').onclick = () => {
     lang.setLocale(next);
     refreshIntro();
     if (state.currentScene === 'vocab-scene') VocabularyGame.showCategorySelect();
-    if (state.currentScene === 'math-scene')  MathGame.showDifficultyPicker();
+    if (state.currentScene === 'math-scene') MathGame.showDifficultyPicker();
     if (state.currentScene === 'playground-scene') Playground.render();
 };

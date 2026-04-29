@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Content: Encyclopedic](https://img.shields.io/badge/Content-100_Categories-blueviolet.svg)](#)
 [![Experience: Premium](https://img.shields.io/badge/UX-Glassmorphism-brightgreen.svg)](#)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](#)
+[![Live Demo](https://img.shields.io/badge/%F0%9F%9A%80%20Live%20Demo-Vercel-black.svg)](https://ludikids.vercel.app)
 
 **LudiKids** is a world-class, premium educational platform designed for toddlers and early childhood development. It combines a massive, curated vocabulary database with tactile interactivity and "juicy" animations to create a stunning learning environment.
 
@@ -34,7 +36,13 @@
 - **Audio**: Web Speech API & Web Audio API (Oscillator synth).
 - **Persistence**: LocalStorage for stars, unlocked stickers, and playground positions.
 
-## 🚀 Getting Started
+## 🚀 Live Demo
+
+> Try it directly in your browser — no install needed:\n**[🎮 Play LudiKids → ludikids.vercel.app](https://ludikids.vercel.app)**
+
+---
+
+## 🛠️ Getting Started
 
 1. **Clone the repository**:
    ```bash
@@ -57,7 +65,7 @@
 - **Learning**: Math, Shapes, Colors, Time, Geography, Planets, Deep Space...
 - **History**: Dinosaurs, Ancient Egypt, Mythology, Ancient Rome, Ancient Greece...
 - **Daily Life**: Home, Kitchen, Hygiene, Routine, Tools, Construction, Medical...
-- **Fun**: Toys, Superheroes, Fairy Tales, Hobbies, Party Time, Hobbies...
+- **Fun**: Toys, Superheroes, Fairy Tales, Hobbies, Party Time, Sports, Fashion...
 
 ---
 
