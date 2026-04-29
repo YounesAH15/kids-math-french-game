@@ -1,4 +1,4 @@
-﻿
+
 import './style.css'
 import gameData from './data.json'
 import { LanguageManager } from './lang.js'
@@ -58,23 +58,46 @@ class VoiceManager {
         this.voices = this.synth.getVoices();
     }
 
+    /**
+     * Speak a word using the best available voice for the given locale.
+     * 3-tier fallback strategy:
+     *   1. Exact match  : fr-FR / en-US (or en-GB, en-AU…)
+     *   2. Broad match  : any voice whose lang starts with 'fr' or 'en'
+     *   3. No voice set : browser uses utter.lang alone — always correct language,
+     *                     better than forcing a wrong-language voice.
+     * @param {string} text   - Word to speak
+     * @param {string} locale - 'fr' or 'en'
+     */
     static speak(text, locale) {
         if (!text) return;
-        this.synth.cancel(); // Stop any current speech
-        const utter = new SpeechSynthesisUtterance(text);
 
-        // Try to find a matching voice
-        const langCode = locale === 'fr' ? 'fr-FR' : 'en-US';
-        const voice = this.voices.find(v => v.lang.startsWith(langCode)) || this.voices[0];
+        // Lazy reload voices in case they weren't ready at init (common on Android)
+        if (this.voices.length === 0) this.loadVoices();
+
+        this.synth.cancel();
+
+        const utter = new SpeechSynthesisUtterance(text);
+        const exactCode = locale === 'fr' ? 'fr-FR' : 'en-US';
+        const broadCode = locale === 'fr' ? 'fr' : 'en';
+
+        // Tier 1: exact locale (fr-FR, en-US)
+        let voice = this.voices.find(v => v.lang === exactCode);
+
+        // Tier 2: any voice starting with the right language prefix
+        if (!voice) voice = this.voices.find(v => v.lang.toLowerCase().startsWith(broadCode));
+
+        // Tier 3: no voice assigned → utter.lang alone guides the browser
         if (voice) utter.voice = voice;
-        utter.lang = langCode;
-        utter.rate = 0.9; // Slightly slower for kids
-        utter.pitch = 1.1; // Slightly higher/cuter
+
+        utter.lang  = exactCode; // always set — this is the primary language signal
+        utter.rate  = 0.9;       // slightly slower for kids
+        utter.pitch = 1.1;       // slightly higher / cuter
 
         this.synth.speak(utter);
     }
 }
 VoiceManager.init();
+
 
 // ─── Game State ──────────────────────────────────────────────────────────────
 class GameState {
