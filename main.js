@@ -1,4 +1,4 @@
-
+﻿
 import './style.css'
 import gameData from './data.json'
 import { LanguageManager } from './lang.js'
@@ -178,6 +178,7 @@ const SceneManager = {
         state.currentScene = id;
     }
 };
+window.SceneManager = SceneManager;
 
 // ─── Math Game ───────────────────────────────────────────────────────────────
 const MathGame = {
@@ -342,24 +343,26 @@ const MathGame = {
 };
 window.MathGame = MathGame;
 
+// LOCAL VOCAB TRANSLATIONS
+const _VT = {
+    fr: { title:'Choisis ton niveau', l1:'Niveau 1', l1d:'Avec les étiquettes', l2:'Niveau 2', l2d:'Sans étiquettes', l3:'Niveau 3', l3d:'Épelle le mot', q3:'Touche la bonne image 👇', spellTitle:'Épelle le mot !', spellHint:"Touche les lettres dans l'ordre" },
+    en: { title:'Choose your level',  l1:'Level 1',  l1d:'With labels',         l2:'Level 2',  l2d:'No labels',       l3:'Level 3',  l3d:'Spell the word', q3:'Tap the right image 👇',   spellTitle:'Spell the word!', spellHint:'Tap the letters in order' }
+};
+const _vt = (k) => (_VT[lang.locale]||_VT.fr)[k];
+
 // ─── Vocabulary Game ─────────────────────────────────────────────────────────
 const VocabularyGame = {
-    initialized: false,
-    category: null,
-    target: null,
-    mode: 'quiz',  // quiz | flash
-    flashIndex: 0,
+    initialized: false, category: null, target: null, difficulty: 1,
+    mode: 'quiz', flashIndex: 0, spellState: null,
 
     init() {
         if (!this.initialized) { this.createScene(); this.initialized = true; }
         this.showCategorySelect();
         SceneManager.showScene('vocab-scene');
     },
-
     createScene() {
         const s = document.createElement('div');
-        s.id = 'vocab-scene';
-        s.className = 'scene';
+        s.id = 'vocab-scene'; s.className = 'scene';
         document.getElementById('game-viewport').appendChild(s);
     },
 
@@ -368,18 +371,37 @@ const VocabularyGame = {
             <div class="task-info"><p>${lang.t('play_together')}</p></div>
             <div class="category-grid">
                 ${gameData.categories.map(c => `
-                    <button class="category-btn" style="background:${c.color || '#fff'}" onclick="VocabularyGame.startCategory('${c.id}')">
+                    <button class="category-btn" style="background:${c.color||'#fff'}" onclick="VocabularyGame.startCategory('${c.id}')">
                         <span class="cat-icon">${c.icon}</span>
                         <span class="btn-text">${c.name[lang.locale]}</span>
-                    </button>
-                `).join('')}
-            </div>
-        `;
+                    </button>`).join('')}
+            </div>`;
     },
 
-    startCategory(catId) {
-        this.category = lang.getCategory(catId);
-        this.showModePicker();
+    startCategory(catId) { this.category = lang.getCategory(catId); this.showDifficultyPicker(); },
+
+    showDifficultyPicker() {
+        document.getElementById('vocab-scene').innerHTML = `
+            <div class="task-info"><p>${this.category.name[lang.locale]}</p></div>
+            <p class="diff-subtitle">${_vt('title')}</p>
+            <div class="diff-grid">
+                <button class="diff-btn easy-btn"   onclick="VocabularyGame.startDiff(1)">
+                    <span class="diff-icon">🌱</span><span>${_vt('l1')}</span><small class="diff-sub">${_vt('l1d')}</small>
+                </button>
+                <button class="diff-btn medium-btn" onclick="VocabularyGame.startDiff(2)">
+                    <span class="diff-icon">🌻</span><span>${_vt('l2')}</span><small class="diff-sub">${_vt('l2d')}</small>
+                </button>
+                <button class="diff-btn hard-btn"   onclick="VocabularyGame.startDiff(3)">
+                    <span class="diff-icon">🦁</span><span>${_vt('l3')}</span><small class="diff-sub">${_vt('l3d')}</small>
+                </button>
+            </div>
+            <button class="back-btn" onclick="VocabularyGame.showCategorySelect()">⬅️</button>`;
+    },
+
+    startDiff(level) {
+        this.difficulty = level;
+        if (level === 1) this.showModePicker();
+        else { this.mode = 'quiz'; this.nextQuizRound(); }
     },
 
     showModePicker() {
@@ -387,103 +409,135 @@ const VocabularyGame = {
             <div class="task-info"><p>${this.category.name[lang.locale]}</p></div>
             <div class="mode-grid">
                 <button class="mode-btn flash-btn" onclick="VocabularyGame.startFlash()">
-                    <span class="mode-icon">📖</span>
-                    <span>${lang.t('flash_mode')}</span>
+                    <span class="mode-icon">📖</span><span>${lang.t('flash_mode')}</span>
                 </button>
                 <button class="mode-btn quiz-btn" onclick="VocabularyGame.startQuiz()">
-                    <span class="mode-icon">❓</span>
-                    <span>${lang.t('quiz_mode')}</span>
+                    <span class="mode-icon">❓</span><span>${lang.t('quiz_mode')}</span>
                 </button>
             </div>
-            <button class="back-btn" onclick="VocabularyGame.showCategorySelect()">⬅️</button>
-        `;
+            <button class="back-btn" onclick="VocabularyGame.showDifficultyPicker()">⬅️</button>`;
     },
 
-    // ── Flashcard mode ───────────────────────────────────────────────────────
-    startFlash() {
-        this.mode = 'flash';
-        this.flashIndex = 0;
-        this.showFlashcard();
-    },
-
+    // Flashcard mode
+    startFlash() { this.mode = 'flash'; this.flashIndex = 0; this.showFlashcard(); },
     showFlashcard() {
         const items = this.category.items;
-        if (this.flashIndex >= items.length) {
-            // Completed all flashcards
-            state.addStar();
-            setTimeout(() => this.showModePicker(), 2300);
-            return;
-        }
+        if (this.flashIndex >= items.length) { state.addStar(); setTimeout(() => this.showModePicker(), 2300); return; }
         const item = items[this.flashIndex];
         const visual = item.image
-            ? `<img class="flash-img" src="${item.image.startsWith('/') ? '' : '/'}${item.image}" alt="${item.name[lang.locale]}" onerror="this.parentNode.innerHTML='<span class=flash-emoji>${item.emoji || '❓'}</span>'">`
-            : `<span class="flash-emoji">${item.emoji || '❓'}</span>`;
-
+            ? `<img class="flash-img" src="${item.image.startsWith('/')?'':'/'}${item.image}" alt="${item.name[lang.locale]}" onerror="this.parentNode.innerHTML='<span class=flash-emoji>${item.emoji||'❓'}</span>'">`
+            : `<span class="flash-emoji">${item.emoji||'❓'}</span>`;
         document.getElementById('vocab-scene').innerHTML = `
-            <div class="task-info"><p>${lang.t('learn_item', { name: `<span class="big-sound">${item.name[lang.locale]}</span>` })}</p></div>
+            <div class="task-info"><p>${lang.t('learn_item',{name:`<span class="big-sound">${item.name[lang.locale]}</span>`})}</p></div>
             <div class="flash-card" onclick="VocabularyGame.nextFlash()">
                 ${visual}
                 <div class="flash-label">${item.name[lang.locale]}</div>
-                ${lang.locale !== 'fr' ? `<div class="flash-sublabel">${item.name['fr']}</div>` : ''}
+                ${lang.locale!=='fr'?`<div class="flash-sublabel">${item.name['fr']}</div>`:''}
             </div>
-            <div class="flash-progress">${this.flashIndex + 1} / ${items.length}</div>
-            <button class="back-btn" onclick="VocabularyGame.showModePicker()">⬅️</button>
-        `;
+            <div class="flash-progress">${this.flashIndex+1} / ${items.length}</div>
+            <button class="back-btn" onclick="VocabularyGame.showDifficultyPicker()">⬅️</button>`;
         SoundManager.play('flip');
-        // Auto-speak the word
         setTimeout(() => VoiceManager.speak(item.name[lang.locale], lang.locale), 300);
     },
+    nextFlash() { this.flashIndex++; this.showFlashcard(); },
 
-    nextFlash() {
-        this.flashIndex++;
-        this.showFlashcard();
-    },
-
-    // ── Quiz mode ────────────────────────────────────────────────────────────
-    startQuiz() {
-        this.mode = 'quiz';
-        this.nextQuizRound();
-    },
-
+    // Quiz mode
+    startQuiz() { this.mode = 'quiz'; this.nextQuizRound(); },
     nextQuizRound() {
         const items = this.category.items;
-        // Build a pool of 4 choices (always includes the target)
-        const shuffled = [...items].sort(() => Math.random() - 0.5);
-        const pool = shuffled.slice(0, Math.min(4, items.length));
-        this.target = pool[Math.floor(Math.random() * pool.length)];
+        const pool = [...items].sort(() => Math.random()-0.5).slice(0, Math.min(4, items.length));
+        this.target = pool[Math.floor(Math.random()*pool.length)];
+        const d = this.difficulty;
 
         const visual = (item) => item.image
-            ? `<img class="item-img" src="${item.image.startsWith('/') ? '' : '/'}${item.image}" alt="${item.name[lang.locale]}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">${item.emoji ? `<span class="emoji-fallback" style="display:none">${item.emoji}</span>` : ''}`
-            : `<span class="item-emoji">${item.emoji || '❓'}</span>`;
+            ? `<img class="item-img" src="${item.image.startsWith('/')?'':'/'}${item.image}" alt="${item.name[lang.locale]}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">${item.emoji?`<span class="emoji-fallback" style="display:none">${item.emoji}</span>`:''}`
+            : `<span class="item-emoji">${item.emoji||'❓'}</span>`;
+
+        const qHtml = d===3
+            ? `<p>${_vt('q3')}</p>`
+            : `<p>${lang.t('touch_item',{name:`<span class="big-sound">${this.target.name[lang.locale]}</span>`})}</p>`;
 
         document.getElementById('vocab-scene').innerHTML = `
-            <div class="task-info">
-                <p>${lang.t('touch_item', { name: `<span class="big-sound">${this.target.name[lang.locale]}</span>` })}</p>
-            </div>
+            <div class="task-info">${qHtml}</div>
             <div class="item-grid grid-${pool.length}">
-                ${pool.map(item => `
+                ${pool.map(item=>`
                     <div class="item-card" role="button" onclick="VocabularyGame.checkItem('${item.id}')">
                         ${visual(item)}
-                        <span class="item-label">${item.name[lang.locale]}</span>
-                    </div>
-                `).join('')}
+                        ${d===1?`<span class="item-label">${item.name[lang.locale]}</span>`:''}
+                    </div>`).join('')}
             </div>
-            <button class="back-btn" onclick="VocabularyGame.showModePicker()">⬅️</button>
-        `;
-        // Speak the target word question
+            <button class="back-btn" onclick="VocabularyGame.showDifficultyPicker()">⬅️</button>`;
         setTimeout(() => VoiceManager.speak(this.target.name[lang.locale], lang.locale), 200);
     },
-
     checkItem(id) {
         if (id === this.target.id) {
-            state.addStar();
-            setTimeout(() => this.nextQuizRound(), 2300);
-        } else {
-            state.showOops();
+            if (this.difficulty===3) { SoundManager.play('success'); setTimeout(()=>this.showSpellGame(this.target), 600); }
+            else { state.addStar(); setTimeout(()=>this.nextQuizRound(), 2300); }
+        } else { state.showOops(); }
+    },
+
+    // Level 3: Spell the word
+    showSpellGame(item) {
+        const word = item.name[lang.locale].toUpperCase();
+        const chars = [...word].map(c=>({char:c, isLetter:/[A-ZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜ]/i.test(c)}));
+        const targetLetters = chars.filter(c=>c.isLetter).map(c=>c.char);
+        const decoys=[];
+        for (const c of 'BCDFGHJKLMNPQRSTVWXYZ') {
+            if (decoys.length>=3) break;
+            if (!targetLetters.includes(c)) decoys.push(c);
         }
+        const pool = [...targetLetters,...decoys].sort(()=>Math.random()-0.5);
+        this.spellState = {item, chars, targetLetters, pool, cursor:0, usedCards:new Set()};
+        this._renderSpell();
+    },
+    _renderSpell() {
+        const {item,chars,targetLetters,pool,cursor,usedCards} = this.spellState;
+        const visual = item.image
+            ? `<img class="spell-img" src="${item.image.startsWith('/')?'':'/'}${item.image}" alt="" onerror="this.outerHTML='<span class=spell-emoji>${item.emoji||'❓'}</span>'">`
+            : `<span class="spell-emoji">${item.emoji||'❓'}</span>`;
+        let li=0;
+        const boxesHtml = chars.map(c=>{
+            if (!c.isLetter) return `<span class="spell-gap">${c.char===' '?'&nbsp;&nbsp;':c.char}</span>`;
+            const idx=li++;
+            return `<span class="spell-box${idx<cursor?' filled':''}">${idx<cursor?targetLetters[idx]:''}</span>`;
+        }).join('');
+        const cardsHtml = pool.map((letter,i)=>
+            `<button class="letter-card${usedCards.has(i)?' used':''}" onclick="VocabularyGame.tapLetter(${i})">${letter}</button>`
+        ).join('');
+        document.getElementById('vocab-scene').innerHTML = `
+            <div class="spell-container">
+                <p class="spell-title">${_vt('spellTitle')}</p>
+                <div class="spell-visual">${visual}</div>
+                <p class="spell-hint">${_vt('spellHint')}</p>
+                <div class="spell-word-display" id="spell-boxes">${boxesHtml}</div>
+                <div class="spell-letters">${cardsHtml}</div>
+                <button class="spell-erase" onclick="VocabularyGame.tapBackspace()">⌫</button>
+            </div>`;
+    },
+    tapLetter(poolIdx) {
+        const s = this.spellState;
+        if (!s || s.cursor>=s.targetLetters.length || s.usedCards.has(poolIdx)) return;
+        if (s.pool[poolIdx]===s.targetLetters[s.cursor]) {
+            s.usedCards.add(poolIdx); s.cursor++;
+            SoundManager.play('pop'); this._renderSpell();
+            if (s.cursor===s.targetLetters.length) {
+                setTimeout(()=>{state.addStar(); this.spellState=null; setTimeout(()=>this.nextQuizRound(),2400);},300);
+            }
+        } else {
+            const b=document.getElementById('spell-boxes');
+            if(b){b.classList.add('shake');SoundManager.play('error');setTimeout(()=>b.classList.remove('shake'),500);}
+        }
+    },
+    tapBackspace() {
+        const s=this.spellState;
+        if(!s||s.cursor===0) return;
+        const lastUsed=[...s.usedCards].pop();
+        if(lastUsed!==undefined) s.usedCards.delete(lastUsed);
+        s.cursor--; SoundManager.play('flip'); this._renderSpell();
     }
 };
 window.VocabularyGame = VocabularyGame;
+
 
 // ─── Sticker Book ────────────────────────────────────────────────────────────
 const StickerBook = {
@@ -520,7 +574,6 @@ const StickerBook = {
                     ${state.stars >= 5 ? lang.t('get_sticker') : lang.t('need_stars')}
                 </button>
             ` : `<p class="bravo-text">${lang.t('unlock_all')}</p>`}
-            <button class="back-btn" onclick="SceneManager.showScene('intro-scene')">🏠</button>
         `;
     },
 
