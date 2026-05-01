@@ -59,41 +59,65 @@ class VoiceManager {
     }
 
     /**
+     * Finds the most "human-like" voice available for the given locale.
+     * Prioritizes Google, Natural, and High-Quality online voices.
+     */
+    static getBestVoice(locale) {
+        const langPrefix = locale === 'fr' ? 'fr' : 'en';
+        const candidates = this.voices.filter(v => v.lang.toLowerCase().startsWith(langPrefix));
+
+        if (candidates.length === 0) return null;
+
+        // Scoring system for "human-likeness"
+        const getScore = (v) => {
+            let score = 0;
+            const name = v.name.toLowerCase();
+            if (name.includes('google')) score += 10;
+            if (name.includes('natural')) score += 15;
+            if (name.includes('online')) score += 5;
+            if (name.includes('premium') || name.includes('enhanced')) score += 8;
+            
+            // Prefer exact locale matches (fr-FR over fr-CA for a general French app, unless user is in CA)
+            const exactCode = locale === 'fr' ? 'fr-fr' : 'en-us';
+            if (v.lang.toLowerCase() === exactCode) score += 3;
+            
+            return score;
+        };
+
+        return candidates.sort((a, b) => getScore(b) - getScore(a))[0];
+    }
+
+    /**
      * Speak a word using the best available voice for the given locale.
-     * 3-tier fallback strategy:
-     *   1. Exact match  : fr-FR / en-US (or en-GB, en-AU…)
-     *   2. Broad match  : any voice whose lang starts with 'fr' or 'en'
-     *   3. No voice set : browser uses utter.lang alone — always correct language,
-     *                     better than forcing a wrong-language voice.
-     * @param {string} text   - Word to speak
-     * @param {string} locale - 'fr' or 'en'
+     * Uses a multi-tier selection and adds subtle prosody variation.
      */
     static speak(text, locale) {
         if (!text) return;
 
-        // Lazy reload voices in case they weren't ready at init (common on Android)
+        // Lazy reload voices if needed
         if (this.voices.length === 0) this.loadVoices();
 
         this.synth.cancel();
 
         const utter = new SpeechSynthesisUtterance(text);
-        const exactCode = locale === 'fr' ? 'fr-FR' : 'en-US';
-        const broadCode = locale === 'fr' ? 'fr' : 'en';
+        const voice = this.getBestVoice(locale);
 
-        // Tier 1: exact locale (fr-FR, en-US)
-        let voice = this.voices.find(v => v.lang === exactCode);
+        if (voice) {
+            utter.voice = voice;
+            utter.lang = voice.lang;
+        } else {
+            utter.lang = locale === 'fr' ? 'fr-FR' : 'en-US';
+        }
 
-        // Tier 2: any voice starting with the right language prefix
-        if (!voice) voice = this.voices.find(v => v.lang.toLowerCase().startsWith(broadCode));
+        // Subtle prosody randomization to make it feel less "robotic"
+        // Random pitch between 1.05 and 1.15 (cute but varied)
+        utter.pitch = 1.05 + (Math.random() * 0.1);
+        // Random rate between 0.85 and 0.95 (steady but not fixed)
+        utter.rate = 0.85 + (Math.random() * 0.1);
+        utter.volume = 1.0;
 
-        // Tier 3: no voice assigned → utter.lang alone guides the browser
-        if (voice) utter.voice = voice;
-
-        utter.lang  = exactCode; // always set — this is the primary language signal
-        utter.rate  = 0.9;       // slightly slower for kids
-        utter.pitch = 1.1;       // slightly higher / cuter
-
-        this.synth.speak(utter);
+        // Small delay ensures previous cancel() is fully processed by the browser audio engine
+        setTimeout(() => this.synth.speak(utter), 50);
     }
 }
 VoiceManager.init();
